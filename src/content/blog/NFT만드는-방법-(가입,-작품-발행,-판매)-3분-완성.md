@@ -1,7 +1,8 @@
 ---
+draft: true
 title: "NFT만드는 방법 (가입, 작품 발행, 판매)-3분 완성"
 description: "NFT 만들고 발행하고 판매하고 싶다면 먼저 NFT 사이트에 가입을 하여야 한다."
-pubDate: 2021-12-28
+pubDate: 2021-12-28T00:00:00.000Z
 slug: "NFT만드는-방법-(가입,-작품-발행,-판매)-3분-완성"
 category: ai
 ---

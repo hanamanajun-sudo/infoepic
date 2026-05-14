@@ -1,7 +1,8 @@
 ---
+draft: true
 title: "핸드폰 IP 확인 방법 *(아이피 주소 3초에 체크)"
 description: "아이폰 안드로이드 마찬가지 입니다. (핸드폰 뿐 아니라 데스크탑도 동일합니다.)"
-pubDate: 2020-08-30
+pubDate: 2020-08-31T00:00:00.000Z
 slug: "핸드폰-IP-확인-방법-아이피-주소-3초에-체크"
 category: it
 thumbnail: "/images/핸드폰-IP-확인-방법-아이피-주소-3초에-체크/img-1.png"

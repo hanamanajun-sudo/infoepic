@@ -1,7 +1,7 @@
 ---
 title: "캡쳐 프로그램 추천 / 픽픽 (PicPick) 완벽한 기능 무료 툴"
 description: "지금껏 여러 캡처 프로그램을 써왔는데 이건 원하는 기능이 다 있고 무료이다."
-pubDate: 2019-11-20
+pubDate: 2019-11-20T00:00:00.000Z
 slug: "캡쳐-프로그램-추천-_-픽픽-(PicPick)-완벽한-기능-무료-툴"
 category: it
 thumbnail: "/images/캡쳐-프로그램-추천-_-픽픽-(PicPick"

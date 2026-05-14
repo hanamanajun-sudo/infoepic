@@ -1,7 +1,8 @@
 ---
+draft: true
 title: "옛날 노예 VS 요즘 노예"
 description: "옛날 노예는 이렇고 요즘 노예는 뭘좀 아는 노예"
-pubDate: 2020-07-10
+pubDate: 2020-07-10T00:00:00.000Z
 slug: "옛날-노예-VS-요즘-노예"
 category: 엔터
 thumbnail: "/images/옛날-노예-VS-요즘-노예/img.jpg"

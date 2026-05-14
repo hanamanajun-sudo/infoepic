@@ -28,10 +28,10 @@ collections:
     view_filters:
       - label: 공개 글
         field: draft
-        pattern: false
+        pattern: "false"
       - label: 비공개 (임시저장)
         field: draft
-        pattern: true
+        pattern: "true"
 
     fields:
       - label: "제목"

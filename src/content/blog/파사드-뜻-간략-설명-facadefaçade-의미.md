@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "파사드 뜻 (간략 설명) - facade(façade) 의미"
 description: "퍼사드 또는 파사드 영어로는 facade로 적지만 원래는 프랑스어가 유래로 façade로 적는다."
 pubDate: 2022-03-17

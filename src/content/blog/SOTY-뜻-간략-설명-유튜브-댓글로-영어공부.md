@@ -1,7 +1,8 @@
 ---
+draft: true
 title: "SOTY 뜻? (간략 설명) - 유튜브 댓글로 영어공부"
 description: "영어공부까지는 아니고 유튜브에서 롤린 댄스커버 보고 있는데 Rollin SOTY라고 댓글 달고"
-pubDate: 2021-03-21
+pubDate: 2021-03-22T00:00:00.000Z
 slug: "SOTY-뜻-간략-설명-유튜브-댓글로-영어공부"
 category: sns
 thumbnail: "/images/SOTY-뜻-간략-설명-유튜브-댓글로-영어공부/img-1.png"

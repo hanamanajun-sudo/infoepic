@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "코레오그래피 Choreography 뜻/발음 (간략 단어 설명)"
 description: "* 코리아그러피가 영어 발음에 가깝고 한국식으로 발음 하면 코레오그래피 정도일까?"
 pubDate: 2020-11-05

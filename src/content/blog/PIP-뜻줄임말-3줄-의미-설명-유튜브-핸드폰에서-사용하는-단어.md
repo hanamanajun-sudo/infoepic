@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "PIP 뜻/줄임말 (3줄 의미 설명) - 유튜브 핸드폰에서 사용하는 단어"
 description: "핸드폰에서 사용하는 약어인 PIP는 뭐의 줄임말일까?"
 pubDate: 2020-09-17

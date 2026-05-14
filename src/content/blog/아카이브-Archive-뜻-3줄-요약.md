@@ -1,7 +1,8 @@
 ---
+draft: true
 title: "아카이브 Archive 뜻? (3줄 요약)"
 description: "아카이브 Archive의 뜻은 기록, 보관하다, 보관소를 뜻한다."
-pubDate: 2022-01-18
+pubDate: 2022-01-19T00:00:00.000Z
 slug: "아카이브-Archive-뜻-3줄-요약"
 category: 신조어
 thumbnail: "/images/아카이브-Archive-뜻-3줄-요약/img-1.png"

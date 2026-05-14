@@ -1,9 +1,9 @@
 ---
 title: "그알PD 드루이드 설*(동물과 친화력 짤 모음)"
 description: "친화력 갑 SBS 그것이 알고 싶다 PD들"
-pubDate: 2020-06-03
+pubDate: 2020-06-04T00:00:00.000Z
 slug: "그알PD-드루이드-설동물과-친화력-짤-모음"
-draft: true
+draft:true
 category: 엔터
 thumbnail: "/images/그알PD-드루이드-설동물과-친화력-짤-모음/img-1.jpg"
 ---
