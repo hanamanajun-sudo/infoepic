@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "한글(hwp 확장자) 파일 뷰어x 무설치o (3초 해결)"
 description: "한컴오피스 '아래아한글'에서 사용하는 확장자인hwp 파일을 열기 원하는 분들에게"
 pubDate: 2020-02-28

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "잭블랙 아저씨 전설의 섹스붐(Sax-a-boom)"
 description: "지미펠론 투나잇쇼에서 잭블랙 아저씨 나왔는데"
 pubDate: 2020-05-21

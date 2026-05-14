@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "NVMe SSD 종류별 성능  속도 차이점"
 description: "www.etoland.co.kr/plugin/mobile/board.php?bo_table=hit&wr_id=2771798"
 pubDate: 2021-03-26T00:00:00.000Z

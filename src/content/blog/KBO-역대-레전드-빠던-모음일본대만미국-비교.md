@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "KBO 역대 레전드 빠던 모음+(일본/대만/미국 비교)"
 description: "많은 관심 속에서 프로야구가 드디어 개막"
 pubDate: 2020-05-08
