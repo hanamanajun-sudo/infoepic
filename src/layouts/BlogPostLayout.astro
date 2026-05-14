@@ -1,0 +1,130 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import TOC from '../components/TOC.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface RelatedPost {
+  slug: string;
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  category?: string;
+  thumbnail?: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  slug: string;
+  pubDate?: Date;
+  headings?: Heading[];
+  category?: string;
+  relatedPosts?: RelatedPost[];
+}
+
+const { title, description, slug, pubDate, headings = [], category, relatedPosts = [] } = Astro.props;
+
+const SITE = 'https://infoepic.com';
+const formattedDate = pubDate
+  ? pubDate.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })
+  : null;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description ?? '',
+  url: `${SITE}/entry/${slug}`,
+  datePublished: pubDate?.toISOString() ?? '',
+  dateModified: pubDate?.toISOString() ?? '',
+  author: { '@type': 'Organization', name: 'infoepic', url: SITE },
+  publisher: {
+    '@type': 'Organization',
+    name: 'infoepic',
+    url: SITE,
+    logo: { '@type': 'ImageObject', url: `${SITE}/favicon.svg` },
+  },
+  inLanguage: 'ko-KR',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/entry/${slug}` },
+};
+---
+
+<BaseLayout title={title} description={description} slug={slug} pubDate={pubDate}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+  <Header />
+  <ScrollToTop />
+
+  <main class="post-main">
+    <article class="container post-article">
+      <Breadcrumb category={category} title={title} slug={slug} />
+
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        {formattedDate && (
+          <time class="post-date" datetime={pubDate?.toISOString()}>
+            <i class="ph ph-calendar-blank" aria-hidden="true"></i>
+            {formattedDate}
+          </time>
+        )}
+      </header>
+
+      <TOC headings={headings} />
+
+      <div class="prose" data-pagefind-body>
+        <slot />
+      </div>
+
+      <div data-pagefind-ignore>
+        <RelatedPosts posts={relatedPosts} />
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .post-main {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-16);
+    min-height: calc(100vh - 56px);
+  }
+
+  .post-article {
+    padding-inline: var(--space-4);
+  }
+
+  .post-header {
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .post-title {
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-4);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .post-date {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+</style>

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "./tokens.css";
+
+@theme {
+  --color-primary: var(--color-primary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* Base */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width-content); margin-inline: auto; padding-inline: var(--space-4); }
+.container--wide { max-width: var(--max-width-wide); margin-inline: auto; padding-inline: var(--space-6); }
+
+/* Prose overrides */
+.prose {
+  --tw-prose-body: var(--color-text);
+  --tw-prose-headings: var(--color-text);
+  --tw-prose-links: var(--color-link);
+}
+.prose img {
+  border-radius: var(--radius-md);
+  max-width: 100%;
+  height: auto;
+  loading: lazy;
+}
+.prose a { word-break: break-all; }
+
+/* 모바일 기본 개선 */
+@media (max-width: 640px) {
+  .prose { font-size: var(--text-base); }
+  .prose h2 { font-size: 1.25rem; }
+  .prose h3 { font-size: 1.1rem; }
+  .prose pre { font-size: 0.8rem; overflow-x: auto; }
+  .prose table { font-size: var(--text-sm); display: block; overflow-x: auto; }
+}

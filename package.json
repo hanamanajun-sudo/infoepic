@@ -1,0 +1,25 @@
+{
+  "name": "infoepic-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist && wrangler pages functions build --outfile dist/_worker.js --output-config-path dist/_routes.json",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.2.4",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^5.7.11",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@phosphor-icons/web": "^2.1.1",
+    "node-html-parser": "^7.1.0",
+    "pagefind": "^1.5.2",
+    "turndown": "^7.2.4"
+  }
+}

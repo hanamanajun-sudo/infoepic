@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+export async function getStaticPaths() {
+  function strHash(str: string): number {
+    let h = 0;
+    for (let i = 0; i < str.length; i++) {
+      h = Math.imul(31, h) + str.charCodeAt(i) | 0;
+    }
+    return Math.abs(h);
+  }
+
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(post => {
+    const slug = post.id.replace(/\.mdx?$/, '');
+    const category = post.data.category;
+
+    // 같은 카테고리 글을 ID 기준 결정론적 정렬 후 슬러그 해시로 시작점 결정
+    // → 글마다 다른 3개 추천 (최신순 고정 방지)
+    const sameCategory = posts
+      .filter(p => p.id !== post.id && p.data.category === category)
+      .sort((a, b) => a.id.localeCompare(b.id));
+    const n = sameCategory.length;
+    const start = n > 0 ? strHash(slug) % n : 0;
+    const relatedPosts = Array.from({ length: Math.min(3, n) }, (_, i) => {
+      const p = sameCategory[(start + i) % n];
+      return {
+        slug: p.id.replace(/\.mdx?$/, ''),
+        title: p.data.title,
+        description: p.data.description,
+        pubDate: p.data.pubDate,
+        category: p.data.category,
+        thumbnail: p.data.thumbnail,
+      };
+    });
+
+    return { params: { slug }, props: { post, slug, relatedPosts } };
+  });
+}
+
+const { post, slug, relatedPosts } = Astro.props;
+const { Content, headings } = await post.render();
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  description={post.data.description}
+  slug={slug}
+  pubDate={post.data.pubDate}
+  headings={headings}
+  category={post.data.category}
+  relatedPosts={relatedPosts}
+>
+  <Content />
+</BlogPostLayout>

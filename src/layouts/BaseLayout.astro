@@ -1,0 +1,241 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  slug?: string;
+  pubDate?: Date;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'infoepic.com — 생활 정보와 유용한 팁을 공유하는 블로그',
+  slug,
+  pubDate,
+  ogImage,
+} = Astro.props;
+
+const SITE = 'https://infoepic.com';
+const isIndexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
+
+const canonicalUrl = slug
+  ? `${SITE}/entry/${slug}`
+  : `${SITE}${Astro.url.pathname}`;
+
+const ogImageUrl = ogImage ?? `${SITE}/og-default.png`;
+---
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content={Astro.generator} />
+
+  {!isIndexable && <meta name="robots" content="noindex, nofollow" />}
+
+  <title>{title} | infoepic</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content={slug ? 'article' : 'website'} />
+  <meta property="og:title"       content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url"         content={canonicalUrl} />
+  <meta property="og:image"       content={ogImageUrl} />
+  <meta property="og:site_name"   content="infoepic" />
+  <meta property="og:locale"      content="ko_KR" />
+  {pubDate && <meta property="article:published_time" content={pubDate.toISOString()} />}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image"       content={ogImageUrl} />
+
+  <!-- Pretendard Font -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+  <!-- Pagefind UI CSS (generated after build) -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <slot name="head" />
+</head>
+<body>
+  <slot />
+
+  <!-- ── Search Modal ── -->
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-backdrop" id="search-backdrop"></div>
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="검색">
+      <div class="search-modal-top">
+        <p class="search-hint-text">
+          <kbd>ESC</kbd> 또는 배경 클릭으로 닫기
+        </p>
+        <button class="search-modal-close" id="search-modal-close" aria-label="닫기">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div id="pagefind-search-ui"></div>
+    </div>
+  </div>
+
+  <!-- Pagefind UI JS (generated after build — silently skipped in dev) -->
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    (function () {
+      var overlay  = document.getElementById('search-overlay');
+      var backdrop = document.getElementById('search-backdrop');
+      var closeBtn = document.getElementById('search-modal-close');
+      var initialized = false;
+
+      function openSearch() {
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        if (!initialized && typeof PagefindUI !== 'undefined') {
+          new PagefindUI({
+            element: '#pagefind-search-ui',
+            showSubResults: true,
+            translations: { placeholder: '검색어를 입력하세요...' },
+          });
+          initialized = true;
+        }
+
+        setTimeout(function () {
+          var input = document.querySelector('#pagefind-search-ui input');
+          if (input) input.focus();
+        }, 60);
+      }
+
+      function closeSearch() {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      if (backdrop) backdrop.addEventListener('click', closeSearch);
+      if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) closeSearch();
+      });
+
+      window.addEventListener('open-search', openSearch);
+    })();
+  </script>
+</body>
+</html>
+
+<style is:global>
+  /* ── Pagefind UI 테마 ── */
+  :root {
+    --pagefind-ui-scale: 0.95;
+    --pagefind-ui-primary: #3B82F6;
+    --pagefind-ui-text: #1E293B;
+    --pagefind-ui-background: #FFFFFF;
+    --pagefind-ui-border: #E2E8F0;
+    --pagefind-ui-border-radius: 8px;
+    --pagefind-ui-font: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+  }
+
+  /* ── Search Modal ── */
+  .search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(48px, 9vh, 88px) 16px 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+  }
+  .search-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .search-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .search-modal {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    width: min(640px, 100%);
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+    padding: 16px 20px 24px;
+  }
+
+  .search-modal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .search-hint-text {
+    font-size: 0.72rem;
+    color: #94A3B8;
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+  .search-hint-text kbd {
+    display: inline-block;
+    padding: 1px 5px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+  }
+
+  .search-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #F1F5F9;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #64748B;
+    transition: background 120ms;
+    flex-shrink: 0;
+  }
+  .search-modal-close:hover { background: #E2E8F0; }
+
+  /* Pagefind 결과 스타일 보정 */
+  .pagefind-ui__result {
+    border-bottom: 1px solid #F1F5F9 !important;
+  }
+  .pagefind-ui__result-title a {
+    color: #1E293B !important;
+    font-weight: 600;
+  }
+  .pagefind-ui__result-title a:hover {
+    color: #3B82F6 !important;
+  }
+</style>

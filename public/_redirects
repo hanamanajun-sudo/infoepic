@@ -1,0 +1,5 @@
+# www → apex 리디렉션 (Phase 2-B)
+https://www.infoepic.com/* https://infoepic.com/:splat 301!
+
+# trailing slash 제거: /entry/slug/ → /entry/slug
+/entry/:slug/ /entry/:slug 301

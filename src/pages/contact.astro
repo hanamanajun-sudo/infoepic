@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const email = 'hanamanajun@gmail.com';
+---
+
+<BaseLayout title="문의 — infoepic" description="infoepic.com에 문의하시려면 이메일을 보내주세요.">
+  <Header />
+
+  <main class="page-main">
+    <div class="container">
+      <article class="page-content">
+        <h1>문의</h1>
+
+        <p>
+          게시물의 오류 제보, 저작권 관련 문의, 기타 의견은 아래 이메일로 보내주세요.
+          영업일 기준 2~3일 내에 답변 드리겠습니다.
+        </p>
+
+        <div class="contact-box">
+          <p class="contact-label">이메일</p>
+          <a href={`mailto:${email}`} class="contact-email">{email}</a>
+        </div>
+
+        <h2>이런 문의를 받습니다</h2>
+        <ul>
+          <li>게시물 내용의 오류 또는 최신화 요청</li>
+          <li>저작권·초상권 침해 신고</li>
+          <li>광고·협찬 제안</li>
+          <li>기타 건의사항</li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-main {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+  }
+
+  .page-content {
+    max-width: 680px;
+  }
+
+  .page-content h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .page-content h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+  }
+
+  .page-content p,
+  .page-content li {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+
+  .page-content ul {
+    padding-left: var(--space-6);
+  }
+
+  .contact-box {
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin: var(--space-8) 0;
+  }
+
+  .contact-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-1);
+  }
+
+  .contact-email {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .contact-email:hover {
+    text-decoration: underline;
+  }
+</style>

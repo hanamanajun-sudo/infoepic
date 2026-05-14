@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PostCard from '../components/PostCard.astro';
+import CategoryNav from '../components/CategoryNav.astro';
+import Pagination from '../components/Pagination.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+
+const PER_PAGE = 20;
+const PAGE = 1;
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => {
+  const da = a.data.pubDate?.getTime() ?? 0;
+  const db = b.data.pubDate?.getTime() ?? 0;
+  return db - da;
+});
+
+const totalPages = Math.ceil(sorted.length / PER_PAGE);
+const posts = sorted.slice(0, PER_PAGE);
+
+// 카테고리별 글 수
+const counts: Record<string, number> = { all: sorted.length };
+for (const p of allPosts) {
+  const c = p.data.category ?? '엔터';
+  counts[c] = (counts[c] ?? 0) + 1;
+}
+---
+
+<BaseLayout title="생활 정보 블로그 — infoepic">
+  <Header />
+  <ScrollToTop />
+
+  <main class="home-main">
+    <div class="container">
+
+      <section class="hero">
+        <h1 class="hero-title">유용한 생활 정보, 한곳에서</h1>
+        <p class="hero-desc">IT 팁, 생활 꿀팁, 최신 이슈를 쉽고 빠르게 확인하세요.</p>
+      </section>
+
+      <CategoryNav current="all" counts={counts} />
+
+      {posts.length === 0 ? (
+        <p class="empty-state">아직 게시물이 없습니다.</p>
+      ) : (
+        <ul class="post-list" role="list">
+          {posts.map(post => {
+            const slug = post.id.replace(/\.mdx?$/, '');
+            return (
+              <PostCard
+                slug={slug}
+                title={post.data.title}
+                description={post.data.description}
+                pubDate={post.data.pubDate}
+                category={post.data.category}
+                thumbnail={post.data.thumbnail}
+              />
+            );
+          })}
+        </ul>
+      )}
+
+      <Pagination currentPage={PAGE} totalPages={totalPages} baseUrl="/" />
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .home-main {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-16);
+  }
+  .hero {
+    margin-bottom: var(--space-8);
+  }
+  .hero-title {
+    font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+    margin-bottom: var(--space-2);
+    word-break: keep-all;
+  }
+  .hero-desc {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-6);
+  }
+  .empty-state {
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: var(--space-16) 0;
+  }
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+</style>

@@ -1,0 +1,143 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;  // e.g. "/" or "/category/it"
+}
+const { currentPage, totalPages, baseUrl } = Astro.props;
+if (totalPages <= 1) return;
+
+const base = baseUrl.replace(/\/$/, '');
+
+function pageUrl(n: number) {
+  return n === 1 ? (base || '/') : `${base}/page/${n}`;
+}
+
+// 표시할 페이지 번호 범위 (현재 ±2)
+const pages: (number | '...')[] = [];
+for (let i = 1; i <= totalPages; i++) {
+  if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 2) {
+    pages.push(i);
+  } else if (pages[pages.length - 1] !== '...') {
+    pages.push('...');
+  }
+}
+---
+
+<nav class="pagination" aria-label="페이지 탐색">
+  <a
+    href={currentPage > 1 ? pageUrl(currentPage - 1) : undefined}
+    class:list={['page-btn', 'page-prev', { disabled: currentPage === 1 }]}
+    aria-disabled={currentPage === 1}
+  >
+    <i class="ph ph-caret-left" aria-hidden="true"></i>
+    이전
+  </a>
+
+  <ol class="page-numbers" role="list">
+    {pages.map(p =>
+      p === '...' ? (
+        <li><span class="page-ellipsis">…</span></li>
+      ) : (
+        <li>
+          <a
+            href={pageUrl(p as number)}
+            class:list={['page-num', { current: p === currentPage }]}
+            aria-current={p === currentPage ? 'page' : undefined}
+          >
+            {p}
+          </a>
+        </li>
+      )
+    )}
+  </ol>
+
+  <a
+    href={currentPage < totalPages ? pageUrl(currentPage + 1) : undefined}
+    class:list={['page-btn', 'page-next', { disabled: currentPage === totalPages }]}
+    aria-disabled={currentPage === totalPages}
+  >
+    다음
+    <i class="ph ph-caret-right" aria-hidden="true"></i>
+  </a>
+</nav>
+
+<style>
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding-top: var(--space-10);
+    flex-wrap: wrap;
+  }
+
+  .page-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    background: var(--color-bg);
+  }
+  .page-btn:not(.disabled):hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  .page-btn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+  .page-num:hover {
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+  .page-num.current {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    pointer-events: none;
+  }
+  .page-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+  }
+
+  @media (max-width: 480px) {
+    .page-btn { padding: 7px 10px; font-size: var(--text-xs); }
+    .page-num, .page-ellipsis { width: 32px; height: 32px; font-size: var(--text-xs); }
+  }
+</style>

@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PostCard from '../../components/PostCard.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+import Pagination from '../../components/Pagination.astro';
+import ScrollToTop from '../../components/ScrollToTop.astro';
+
+const CAT_LABELS: Record<string, string> = {
+  sns:   '유튜브·SNS',
+  ai:    'AI·신기술',
+  신조어: '신조어·뜻',
+  생활:  '생활·상식',
+  it:    'IT·컴퓨터',
+  엔터:  '엔터·이슈',
+};
+
+export async function getStaticPaths() {
+  const PER_PAGE = 20;
+  const CAT_KEYS = ['sns', 'ai', '신조어', '생활', 'it', '엔터'];
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+  const globalCounts: Record<string, number> = { all: allPosts.length };
+  for (const p of allPosts) {
+    const k = p.data.category ?? '엔터';
+    globalCounts[k] = (globalCounts[k] ?? 0) + 1;
+  }
+
+  const paths = [];
+  for (const cat of CAT_KEYS) {
+    const filtered = allPosts
+      .filter(p => (p.data.category ?? '엔터') === cat)
+      .sort((a, b) => {
+        const da = a.data.pubDate?.getTime() ?? 0;
+        const db = b.data.pubDate?.getTime() ?? 0;
+        return db - da;
+      });
+
+    const totalPages = Math.ceil(filtered.length / PER_PAGE);
+
+    // page 1
+    paths.push({
+      params: { cat },
+      props: { posts: filtered.slice(0, PER_PAGE), currentPage: 1, totalPages, cat, counts: globalCounts },
+    });
+
+    // page 2+: /category/[cat]/page/[page] 는 별도 파일로 처리
+    // 여기선 1페이지만 (추가 페이지는 [cat]/page/[page].astro에서)
+  }
+  return paths;
+}
+
+const { posts, currentPage, totalPages, cat, counts } = Astro.props;
+const catLabel = CAT_LABELS[cat] ?? cat;
+---
+
+<BaseLayout title={`${catLabel} — infoepic`} description={`infoepic.com의 ${catLabel} 카테고리 글 모음`}>
+  <Header />
+  <ScrollToTop />
+
+  <main class="home-main">
+    <div class="container">
+      <section class="page-header">
+        <h1 class="page-title">{catLabel}</h1>
+        <p class="page-count">글 {counts[cat] ?? 0}개</p>
+      </section>
+
+      <CategoryNav current={cat} counts={counts} />
+
+      {posts.length === 0 ? (
+        <p class="empty-state">아직 게시물이 없습니다.</p>
+      ) : (
+        <ul class="post-list" role="list">
+          {posts.map((post: any) => {
+            const slug = post.id.replace(/\.mdx?$/, '');
+            return (
+              <PostCard
+                slug={slug}
+                title={post.data.title}
+                description={post.data.description}
+                pubDate={post.data.pubDate}
+                category={post.data.category}
+                thumbnail={post.data.thumbnail}
+              />
+            );
+          })}
+        </ul>
+      )}
+
+      <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl={`/category/${cat}`} />
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .home-main { padding-top: var(--space-10); padding-bottom: var(--space-16); }
+  .page-header { margin-bottom: var(--space-6); }
+  .page-title { font-size: var(--text-2xl); margin: 0 0 var(--space-1); }
+  .page-count { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0 0 var(--space-6); }
+  .empty-state { color: var(--color-text-muted); text-align: center; padding: var(--space-16) 0; }
+  .post-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+</style>

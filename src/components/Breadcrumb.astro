@@ -1,0 +1,96 @@
+---
+const CAT_LABELS: Record<string, string> = {
+  sns:   '유튜브·SNS',
+  ai:    'AI·신기술',
+  신조어: '신조어·뜻',
+  생활:  '생활·상식',
+  it:    'IT·컴퓨터',
+  엔터:  '엔터·이슈',
+};
+
+interface Props {
+  category?: string;
+  title: string;
+  slug: string;
+}
+
+const { category, title, slug } = Astro.props;
+const SITE = 'https://infoepic.com';
+
+const items = [
+  { label: '홈', href: '/' },
+  ...(category ? [{ label: CAT_LABELS[category] ?? category, href: `/category/${category}` }] : []),
+  { label: title, href: `/entry/${slug}` },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.label,
+    item: `${SITE}${item.href}`,
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+<nav class="breadcrumb" aria-label="경로">
+  <ol class="breadcrumb-list">
+    {items.map((item, i) => (
+      <li class="breadcrumb-item">
+        {i < items.length - 1 ? (
+          <>
+            <a href={item.href} class="breadcrumb-link">{item.label}</a>
+            <i class="ph ph-caret-right breadcrumb-sep" aria-hidden="true"></i>
+          </>
+        ) : (
+          <span class="breadcrumb-current" aria-current="page">{item.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb {
+    margin-bottom: var(--space-5);
+  }
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .breadcrumb-link {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: 2px 3px;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+  }
+  .breadcrumb-link:hover { color: var(--color-primary); }
+  .breadcrumb-sep {
+    font-size: 0.6rem;
+    color: var(--color-text-light);
+  }
+  .breadcrumb-current {
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>

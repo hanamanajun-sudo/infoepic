@@ -1,0 +1,120 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+interface Props {
+  headings: Heading[];
+}
+const { headings } = Astro.props;
+const filtered = headings.filter(h => h.depth === 2 || h.depth === 3);
+---
+
+{filtered.length >= 3 && (
+  <nav class="toc" aria-label="목차">
+    <button class="toc-toggle" aria-expanded="true" id="toc-toggle">
+      <span class="toc-toggle-label">
+        <i class="ph ph-list-bullets" aria-hidden="true"></i>
+        목차
+      </span>
+      <i class="ph ph-caret-down toc-caret" aria-hidden="true"></i>
+    </button>
+    <ol class="toc-list" id="toc-list">
+      {filtered.map(h => (
+        <li class:list={['toc-item', `toc-depth-${h.depth}`]}>
+          <a href={`#${h.slug}`}>{h.text}</a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<script>
+  const toggle = document.getElementById('toc-toggle');
+  const list = document.getElementById('toc-list');
+  if (toggle && list) {
+    // 모바일이면 기본 닫음
+    if (window.matchMedia('(max-width: 640px)').matches) {
+      toggle.setAttribute('aria-expanded', 'false');
+      list.classList.add('collapsed');
+    }
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      list.classList.toggle('collapsed', isOpen);
+    });
+  }
+</script>
+
+<style>
+  .toc {
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    margin: var(--space-8) 0;
+    overflow: hidden;
+  }
+
+  /* 토글 버튼 */
+  .toc-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3) var(--space-4);
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  .toc-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .toc-caret {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
+  }
+  .toc-toggle[aria-expanded="false"] .toc-caret {
+    transform: rotate(-90deg);
+  }
+
+  /* 데스크탑: 버튼 클릭 불가 스타일 → 항상 열려있음처럼 */
+  @media (min-width: 641px) {
+    .toc-toggle { cursor: default; }
+    .toc-caret { display: none; }
+  }
+
+  /* 목록 */
+  .toc-list {
+    list-style: none;
+    padding: 0 var(--space-4) var(--space-4);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    transition: none;
+  }
+  .toc-list.collapsed { display: none; }
+
+  .toc-item a {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    line-height: 1.5;
+    transition: color var(--transition-fast);
+    display: block;
+    padding: 2px 0;
+  }
+  .toc-item a:hover { color: var(--color-primary); }
+  .toc-depth-3 { padding-left: var(--space-4); }
+  .toc-depth-3 a { font-size: var(--text-xs); }
+</style>

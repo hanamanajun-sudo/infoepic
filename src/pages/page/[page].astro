@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PostCard from '../../components/PostCard.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+import Pagination from '../../components/Pagination.astro';
+import ScrollToTop from '../../components/ScrollToTop.astro';
+
+export async function getStaticPaths() {
+  const PER_PAGE = 20;
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+  const sorted = allPosts.sort((a, b) => {
+    const da = a.data.pubDate?.getTime() ?? 0;
+    const db = b.data.pubDate?.getTime() ?? 0;
+    return db - da;
+  });
+  const totalPages = Math.ceil(sorted.length / PER_PAGE);
+  // page 1은 /index.astro가 담당, 2부터
+  return Array.from({ length: totalPages - 1 }, (_, i) => {
+    const page = i + 2;
+    return {
+      params: { page: String(page) },
+      props: {
+        posts: sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE),
+        currentPage: page,
+        totalPages,
+        counts: (() => {
+          const c: Record<string, number> = { all: sorted.length };
+          for (const p of allPosts) { const k = p.data.category ?? '엔터'; c[k] = (c[k] ?? 0) + 1; }
+          return c;
+        })(),
+      },
+    };
+  });
+}
+
+const { posts, currentPage, totalPages, counts } = Astro.props;
+---
+
+<BaseLayout title={`전체 글 — ${currentPage}페이지 | infoepic`}>
+  <Header />
+  <ScrollToTop />
+
+  <main class="home-main">
+    <div class="container">
+      <section class="page-header">
+        <h1 class="page-title">전체 글</h1>
+      </section>
+
+      <CategoryNav current="all" counts={counts} />
+
+      <ul class="post-list" role="list">
+        {posts.map((post: any) => {
+          const slug = post.id.replace(/\.mdx?$/, '');
+          return (
+            <PostCard
+              slug={slug}
+              title={post.data.title}
+              description={post.data.description}
+              pubDate={post.data.pubDate}
+              category={post.data.category}
+              thumbnail={post.data.thumbnail}
+            />
+          );
+        })}
+      </ul>
+
+      <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/" />
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .home-main { padding-top: var(--space-10); padding-bottom: var(--space-16); }
+  .page-header { margin-bottom: var(--space-8); }
+  .page-title { font-size: var(--text-2xl); margin: 0 0 var(--space-6); }
+  .post-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+</style>

@@ -1,0 +1,102 @@
+---
+interface Props {
+  current?: string;
+  counts?: Record<string, number>;
+}
+const { current = 'all', counts = {} } = Astro.props;
+
+const CATS = [
+  { key: 'all',  label: '전체',      href: '/' },
+  { key: 'it',   label: 'IT·컴퓨터', href: '/category/it' },
+  { key: 'sns',  label: '유튜브·SNS',href: '/category/sns' },
+  { key: 'ai',   label: 'AI·신기술', href: '/category/ai' },
+  { key: '신조어', label: '신조어·뜻', href: '/category/신조어' },
+  { key: '생활',  label: '생활·상식', href: '/category/생활' },
+  { key: '엔터',  label: '엔터·이슈', href: '/category/엔터' },
+];
+---
+
+<nav class="cat-nav" aria-label="카테고리">
+  <ul class="cat-nav-list" role="list">
+    {CATS.map(cat => (
+      <li>
+        <a
+          href={cat.href}
+          class:list={['cat-nav-item', { active: current === cat.key }]}
+          aria-current={current === cat.key ? 'page' : undefined}
+        >
+          {cat.label}
+          {counts[cat.key] !== undefined && (
+            <span class="cat-count">{counts[cat.key]}</span>
+          )}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .cat-nav {
+    margin-bottom: var(--space-6);
+  }
+
+  .cat-nav-list {
+    display: flex;
+    flex-wrap: wrap;   /* 스크롤 대신 줄바꿈 */
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cat-nav-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 14px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+  }
+  .cat-nav-item:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary-light);
+    background: var(--color-primary-light);
+  }
+  .cat-nav-item.active {
+    color: var(--color-text-on-primary);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+  .cat-nav-item.active .cat-count {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+  }
+
+  .cat-count {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: var(--font-weight-semibold);
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: var(--color-bg-subtle);
+    color: var(--color-text-muted);
+    min-width: 20px;
+    text-align: center;
+  }
+
+  /* 모바일: 좀 더 작게 */
+  @media (max-width: 480px) {
+    .cat-nav-item {
+      padding: 6px 11px;
+      font-size: var(--text-xs);
+    }
+  }
+</style>

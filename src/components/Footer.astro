@@ -1,0 +1,53 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container--wide footer-inner">
+    <p class="footer-copy">&copy; {year} infoepic.com. All rights reserved.</p>
+    <nav class="footer-nav" aria-label="푸터 메뉴">
+      <a href="/about">소개</a>
+      <a href="/privacy-policy">개인정보처리방침</a>
+      <a href="/disclaimer">면책조항</a>
+      <a href="/contact">문의</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+    padding: var(--space-8) 0;
+    background: var(--color-bg-subtle);
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .footer-copy {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .footer-nav a {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-nav a:hover { color: var(--color-text); }
+</style>

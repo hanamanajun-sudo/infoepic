@@ -1,0 +1,91 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/infoepic   # ← GitHub 사용자명/저장소명으로 수정
+  branch: main
+  base_url: https://preview.infoepic.pages.dev  # ← 도메인 전환 후 https://infoepic.com 으로 변경
+  auth_endpoint: /oauth/auth
+
+locale: ko
+
+publish_mode: simple
+
+# 이미지 업로드 경로
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: blog
+    label: 블로그 글
+    label_singular: 글
+    folder: src/content/blog
+    extension: md
+    create: true
+    delete: true
+    slug: "{{fields.title}}"
+    preview_path: "entry/{{slug}}"
+
+    # 목록 정렬
+    sortable_fields:
+      default:
+        field: pubDate
+        direction: Descending
+      fields:
+        - label: 게시일
+          name: pubDate
+        - label: 제목
+          name: title
+
+    # 공개/비공개 필터
+    view_filters:
+      - label: 공개 글
+        field: draft
+        pattern: false
+      - label: 비공개 (임시저장)
+        field: draft
+        pattern: true
+
+    fields:
+      - label: "제목"
+        name: title
+        widget: string
+
+      - label: "설명 (SEO meta)"
+        name: description
+        widget: string
+        required: false
+        hint: "검색 결과에 표시되는 짧은 설명 (100–160자 권장)"
+
+      - label: "게시일"
+        name: pubDate
+        widget: datetime
+        time_format: false
+        format: "YYYY-MM-DDTHH:mm:ss.000Z"
+        required: false
+
+      - label: "비공개 (draft)"
+        name: draft
+        widget: boolean
+        default: false
+        hint: "켜면 사이트에서 숨겨집니다"
+
+      - label: "카테고리"
+        name: category
+        widget: select
+        required: false
+        options:
+          - { label: "유튜브·SNS", value: "sns" }
+          - { label: "AI·신기술",  value: "ai" }
+          - { label: "신조어·뜻",  value: "신조어" }
+          - { label: "생활·상식",  value: "생활" }
+          - { label: "IT·컴퓨터", value: "it" }
+          - { label: "엔터·이슈",  value: "엔터" }
+
+      - label: "썸네일 경로"
+        name: thumbnail
+        widget: string
+        required: false
+        hint: "예: /images/uploads/my-image.jpg  (이미지 업로드 후 경로 복사)"
+
+      - label: "본문"
+        name: body
+        widget: markdown

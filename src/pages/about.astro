@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="소개 — infoepic" description="infoepic.com은 IT, 생활, 상식 등 실생활에 도움이 되는 정보를 다루는 블로그입니다.">
+  <Header />
+
+  <main class="page-main">
+    <div class="container">
+      <article class="page-content prose">
+        <h1>소개</h1>
+
+        <p>
+          <strong>infoepic.com</strong>은 컴퓨터 활용법, 스마트폰 팁, 인터넷 서비스 이용법, 생활 상식 등
+          실생활에서 바로 써먹을 수 있는 정보를 쉽고 빠르게 전달하는 블로그입니다.
+        </p>
+
+        <h2>다루는 주제</h2>
+        <ul>
+          <li>컴퓨터·스마트폰 사용 팁</li>
+          <li>유튜브·SNS 이용 방법</li>
+          <li>무료 프로그램·사이트 추천</li>
+          <li>신조어·줄임말 뜻 정리</li>
+          <li>생활 상식 및 호칭 정리</li>
+          <li>최신 IT 트렌드 설명</li>
+        </ul>
+
+        <h2>운영 방침</h2>
+        <p>
+          본 블로그는 검증된 정보를 바탕으로 작성하며, 독자가 짧은 시간 안에 필요한 정보를 얻을 수 있도록 구성합니다.
+          오류나 개선이 필요한 내용은 <a href="/contact">문의 페이지</a>를 통해 알려주시면 빠르게 수정하겠습니다.
+        </p>
+
+        <p>
+          광고 수익이 발생하는 경우 블로그 운영에 재투자되며, 광고로 인해 콘텐츠의 품질이나 중립성을 타협하지 않습니다.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-main {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+  }
+
+  .page-content {
+    max-width: 680px;
+  }
+
+  .page-content h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .page-content h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+  }
+
+  .page-content p,
+  .page-content li {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+
+  .page-content ul {
+    padding-left: var(--space-6);
+  }
+
+  .page-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>

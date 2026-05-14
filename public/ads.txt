@@ -1,0 +1,2 @@
+# ads.txt — 애드센스 승인 후 Google 발급 publisher ID로 교체 필요
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

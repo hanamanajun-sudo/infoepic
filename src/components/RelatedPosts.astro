@@ -1,0 +1,64 @@
+---
+import PostCard from './PostCard.astro';
+
+interface PostData {
+  slug: string;
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  category?: string;
+  thumbnail?: string;
+}
+
+interface Props {
+  posts: PostData[];
+}
+
+const { posts } = Astro.props;
+---
+
+{posts.length > 0 && (
+  <section class="related-posts">
+    <h2 class="related-title">
+      <i class="ph ph-newspaper-clipping" aria-hidden="true"></i>
+      관련 글
+    </h2>
+    <ul class="related-list">
+      {posts.map(post => (
+        <PostCard
+          slug={post.slug}
+          title={post.title}
+          description={post.description}
+          pubDate={post.pubDate}
+          category={post.category}
+          thumbnail={post.thumbnail}
+        />
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .related-posts {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+  .related-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin: 0 0 var(--space-4);
+  }
+  .related-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+</style>

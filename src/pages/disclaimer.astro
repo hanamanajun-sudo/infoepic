@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="면책조항 — infoepic" description="infoepic.com의 면책조항입니다.">
+  <Header />
+
+  <main class="page-main">
+    <div class="container">
+      <article class="page-content">
+        <h1>면책조항</h1>
+
+        <h2>정보의 정확성</h2>
+        <p>
+          infoepic.com의 모든 게시물은 작성 시점의 정보를 기반으로 하며, 정확하고 유용한 정보를 제공하기 위해 노력합니다.
+          그러나 IT 환경이나 서비스는 빠르게 변화하므로, 일부 정보가 현재 상황과 다를 수 있습니다.
+          중요한 결정을 내리기 전에 공식 채널을 통해 최신 정보를 확인하시기 바랍니다.
+        </p>
+
+        <h2>광고</h2>
+        <p>
+          본 사이트는 Google AdSense 등의 광고 서비스를 통해 수익을 창출할 수 있습니다.
+          광고 콘텐츠는 본 사이트의 편집 방향과 무관하며, 광고주와 본 사이트는 서로 독립적입니다.
+        </p>
+
+        <h2>제휴 링크</h2>
+        <p>
+          일부 게시물에는 제휴 마케팅 링크가 포함될 수 있습니다. 이 링크를 통해 구매가 이루어지면 소정의 수수료가 지급될 수 있으나,
+          이는 콘텐츠의 중립성에 영향을 미치지 않습니다.
+        </p>
+
+        <h2>외부 링크</h2>
+        <p>
+          본 사이트에 포함된 외부 링크는 참고 목적으로만 제공됩니다. 외부 사이트의 내용이나 서비스에 대해 본 사이트는 책임을 지지 않습니다.
+        </p>
+
+        <h2>손해 배상 제한</h2>
+        <p>
+          본 사이트의 정보를 참고하여 발생한 직·간접적인 손해에 대해 본 사이트 운영자는 법적 책임을 지지 않습니다.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-main {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+  }
+
+  .page-content {
+    max-width: 680px;
+  }
+
+  .page-content h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-8);
+  }
+
+  .page-content h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+  }
+
+  .page-content p,
+  .page-content li {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+
+  .page-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>
