@@ -1,15 +1,14 @@
 backend:
   name: github
-  repo: hanamanajun-sudo/infoepic   # ← GitHub 사용자명/저장소명으로 수정
+  repo: hanamanajun-sudo/infoepic
   branch: main
-  base_url: https://preview.infoepic.pages.dev  # ← 도메인 전환 후 https://infoepic.com 으로 변경
+  base_url: https://preview.infoepic.pages.dev
   auth_endpoint: /oauth/auth
 
 locale: ko
 
 publish_mode: simple
 
-# 이미지 업로드 경로
 media_folder: public/images/uploads
 public_folder: /images/uploads
 
@@ -24,18 +23,8 @@ collections:
     slug: "{{fields.title}}"
     preview_path: "entry/{{slug}}"
 
-    # 목록 정렬
-    sortable_fields:
-      default:
-        field: pubDate
-        direction: Descending
-      fields:
-        - label: 게시일
-          name: pubDate
-        - label: 제목
-          name: title
+    sortable_fields: [pubDate, title]
 
-    # 공개/비공개 필터
     view_filters:
       - label: 공개 글
         field: draft
@@ -84,7 +73,7 @@ collections:
         name: thumbnail
         widget: string
         required: false
-        hint: "예: /images/uploads/my-image.jpg  (이미지 업로드 후 경로 복사)"
+        hint: "예: /images/uploads/my-image.jpg"
 
       - label: "본문"
         name: body
