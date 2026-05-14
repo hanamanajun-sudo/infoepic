@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/infoepic   # ← GitHub 사용자명/저장소명으로 수정
+  repo: repo: hanamanajun-sudo/infoepic   # ← GitHub 사용자명/저장소명으로 수정
   branch: main
   base_url: https://preview.infoepic.pages.dev  # ← 도메인 전환 후 https://infoepic.com 으로 변경
   auth_endpoint: /oauth/auth
