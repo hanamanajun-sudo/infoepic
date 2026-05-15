@@ -3,6 +3,7 @@ title: "오징어게임 움짤 (조상우: 하 XX 기훈이형!!)+오일남 짤"
 description: "오징어 게임 짤 움짤 모으려고 합니다."
 pubDate: 2021-10-08
 slug: "오징어게임-움짤-조상우-하-XX-기훈이형"
+draft: true
 category: 엔터
 thumbnail: "/images/오징어게임-움짤-조상우-하-XX-기훈이형/img.gif"
 ---
