@@ -6,6 +6,7 @@ import TOC from '../components/TOC.astro';
 import ScrollToTop from '../components/ScrollToTop.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 
 interface Heading {
   depth: number;
@@ -85,6 +86,8 @@ const jsonLd = {
       <div class="prose" data-pagefind-body>
         <slot />
       </div>
+
+      <ShareButtons title={title} slug={slug} />
 
       <div data-pagefind-ignore>
         <RelatedPosts posts={relatedPosts} />

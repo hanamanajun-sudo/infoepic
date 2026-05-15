@@ -1,0 +1,160 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+}
+const { title, slug } = Astro.props;
+const url = `https://infoepic.com/entry/${slug}`;
+---
+
+<div class="share-wrap" data-pagefind-ignore>
+  <p class="share-label">이 글이 도움됐다면 공유해보세요 😊</p>
+  <div class="share-buttons">
+    <button class="share-btn btn-copy" id="share-copy" data-url={url} aria-label="링크 복사">
+      <i class="ph ph-link" aria-hidden="true"></i>
+      <span>링크 복사</span>
+    </button>
+
+    <button class="share-btn btn-kakao" id="share-kakao" data-url={url} aria-label="카카오톡 공유">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">
+        <path d="M9 1C4.58 1 1 3.92 1 7.5c0 2.36 1.56 4.43 3.9 5.6L4 16l3.4-2.28A9.6 9.6 0 009 14c4.42 0 8-2.91 8-6.5S13.42 1 9 1z"/>
+      </svg>
+      <span>카카오톡</span>
+    </button>
+
+    <a class="share-btn btn-x"
+      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`}
+      target="_blank" rel="noopener noreferrer" aria-label="X(트위터) 공유">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+      <span>X 공유</span>
+    </a>
+
+    <a class="share-btn btn-facebook"
+      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
+      target="_blank" rel="noopener noreferrer" aria-label="페이스북 공유">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+      <span>페이스북</span>
+    </a>
+
+    <a class="share-btn btn-naver"
+      href={`https://share.naver.com/web/shareView?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`}
+      target="_blank" rel="noopener noreferrer" aria-label="네이버 공유">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/>
+      </svg>
+      <span>네이버</span>
+    </a>
+  </div>
+  <div class="copy-toast" id="copy-toast">링크가 복사됐어요!</div>
+</div>
+
+<style>
+  .share-wrap {
+    margin: var(--space-10) 0 var(--space-8);
+    padding: var(--space-6);
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    position: relative;
+  }
+
+  .share-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .share-btn:hover { opacity: 0.85; }
+
+  .btn-copy {
+    background: var(--color-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+
+  .btn-kakao {
+    background: #FEE500;
+    color: #3C1E1E;
+  }
+
+  .btn-x {
+    background: #000;
+    color: #fff;
+  }
+
+  .btn-facebook {
+    background: #1877F2;
+    color: #fff;
+  }
+
+  .btn-naver {
+    background: #03C75A;
+    color: #fff;
+  }
+
+  .copy-toast {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-size: var(--text-sm);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .copy-toast.show { display: block; }
+</style>
+
+<script>
+  function initShare() {
+    const toast = document.getElementById('copy-toast');
+
+    function showToast() {
+      toast?.classList.add('show');
+      setTimeout(() => toast?.classList.remove('show'), 2000);
+    }
+
+    document.getElementById('share-copy')?.addEventListener('click', (e) => {
+      const url = (e.currentTarget as HTMLElement).dataset.url ?? location.href;
+      navigator.clipboard.writeText(url).then(showToast);
+    });
+
+    document.getElementById('share-kakao')?.addEventListener('click', (e) => {
+      const url = (e.currentTarget as HTMLElement).dataset.url ?? location.href;
+      navigator.clipboard.writeText(url).then(showToast);
+    });
+  }
+
+  initShare();
+  document.addEventListener('astro:page-load', initShare);
+</script>
