@@ -11,6 +11,7 @@ import Footer from '../components/Footer.astro';
     <div class="container">
       <article class="page-content">
         <h1>면책조항</h1>
+        <p class="updated">최종 수정일: 2026-05-15</p>
 
         <h2>정보의 정확성</h2>
         <p>
@@ -40,6 +41,13 @@ import Footer from '../components/Footer.astro';
         <p>
           본 사이트의 정보를 참고하여 발생한 직·간접적인 손해에 대해 본 사이트 운영자는 법적 책임을 지지 않습니다.
         </p>
+
+        <h2>저작권</h2>
+        <p>
+          본 사이트의 텍스트 콘텐츠는 인용 출처를 명시한 경우를 제외하고 본 사이트 운영자가 작성한 것입니다.
+          무단 복제 및 재배포를 금합니다. 이미지 등 제3자 저작물에 대한 권리 주장이 있는 경우
+          <a href="/contact">문의 페이지</a>를 통해 연락 주시면 즉시 처리하겠습니다.
+        </p>
       </article>
     </div>
   </main>
@@ -59,6 +67,12 @@ import Footer from '../components/Footer.astro';
 
   .page-content h1 {
     font-size: var(--text-3xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .updated {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
     margin-bottom: var(--space-8);
   }
 
