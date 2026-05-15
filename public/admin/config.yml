@@ -2,7 +2,7 @@ backend:
   name: github
   repo: hanamanajun-sudo/infoepic
   branch: main
-  base_url: https://preview.infoepic.pages.dev
+  base_url: https://infoepic.com
   auth_endpoint: /oauth/auth
 
 locale: ko
