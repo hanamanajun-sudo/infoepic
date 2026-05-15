@@ -2,7 +2,7 @@
 title: "무료 텍스트 AI 음성 변환/생성 사이트 BEST 2 추천"
 description: "유튜브에 쓸 자연스러운 AI 목소리 찾으시나요? 무료 최강 TTS 사이트 2곳(일레븐랩스, Vrew)을 직접 써보고 장단점을 비교했습니다. 3초 만에 텍스트를 음성으로 바꿔보세요!\""
 pubDate: 2023-12-22T00:00:00.000Z
-slug: "무료-텍스트-AI-음성-변환_생성-사이트-BEST-2-추천"
+slug: 텍스트로-AI음성-생성
 category: ai
 thumbnail: "/images/무료-텍스트-AI-음성-변환_생성-사이트-BEST-2-추천/Gemini_Generated_Image_pmp4hjpmp4hjpmp4 (1"
 ---
