@@ -5,6 +5,7 @@ pubDate: 2020-09-15
 slug: "GIF-용량-줄이기-사이트-사이트→움짤-업로드→용량-압축➕리사이즈➕-시간-줄이기"
 category: it
 thumbnail: "/images/GIF-용량-줄이기-사이트-사이트→움짤-업로드→용량-압축➕리사이즈➕-시간-줄이기/img-1.png"
+draft: false
 ---
 
 ## **GIF용량 줄이기 방법**

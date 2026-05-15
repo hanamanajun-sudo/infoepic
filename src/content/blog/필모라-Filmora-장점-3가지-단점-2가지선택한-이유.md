@@ -5,6 +5,7 @@ pubDate: 2020-09-14
 slug: "필모라-Filmora-장점-3가지-단점-2가지선택한-이유"
 category: 엔터
 thumbnail: "/images/필모라-Filmora-장점-3가지-단점-2가지선택한-이유/img_7.png"
+draft: false
 ---
 
 오늘은 영상편집프로그램 중 강력 추천하는 필모라에 대해서 자세하게 추천하는

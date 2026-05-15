@@ -5,6 +5,7 @@ pubDate: 2022-06-26
 slug: "tx660-jump-녹음기-sony-icd-tx660-tx650-차이-기능-뭐야"
 category: 신조어
 thumbnail: "/images/tx660-jump-녹음기-sony-icd-tx660-tx650-차이-기능-뭐야/img-1.png"
+draft: false
 ---
 
 녹음기 고르고 고르다가 드디어 정했다.

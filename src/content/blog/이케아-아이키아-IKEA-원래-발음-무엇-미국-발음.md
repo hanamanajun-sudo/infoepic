@@ -5,6 +5,7 @@ pubDate: 2020-11-24T00:00:00.000Z
 slug: "이케아-아이키아-IKEA-원래-발음-무엇-미국-발음"
 category: 신조어
 thumbnail: "/images/이케아-아이키아-IKEA-원래-발음-무엇-미국-발음/img-1.jpg"
+draft: false
 ---
 
 이케아는 한국에 상륙 전 부터 북유럽 감성, 조립을 직접하는 이유로 단가를 낮춤

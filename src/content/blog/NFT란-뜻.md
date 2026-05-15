@@ -5,6 +5,7 @@ pubDate: 2021-12-16T00:00:00.000Z
 slug: "NFT란-뜻"
 category: ai
 thumbnail: "/images/NFT란-뜻/img-1.png"
+draft: false
 ---
 
 최근 몇년 사이에 화제가 되고 있는 NFT에 대해서 정보를 모으고 정리하려고 합니다. 

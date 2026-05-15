@@ -5,6 +5,7 @@ pubDate: 2022-03-10
 slug: "컨트롤프릭-뜻-Control-Freak-행동유형-이유-사례"
 category: 신조어
 thumbnail: "/images/컨트롤프릭-뜻-Control-Freak-행동유형-이유-사례/제목을 입력해주세요_-001 (2"
+draft: false
 ---
 
 ### **컨트롤 프릭 이란?**

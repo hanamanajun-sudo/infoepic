@@ -5,6 +5,7 @@ pubDate: 2023-02-01
 slug: "샤라웃shout-out-뜻-3줄-간단-설명"
 category: 신조어
 thumbnail: "/images/샤라웃shout-out-뜻-3줄-간단-설명/img-1.png"
+draft: false
 ---
 
 샤라웃이라는 글을 커뮤니티 그리고 방송에서도 사용하는 것을 보았다.  (처음에는 입닫으라는 영단어인줄 알았다..)

@@ -5,6 +5,7 @@ pubDate: 2020-09-19
 slug: "손민수-뜻-X민수-유래-최근-신조어-간단-설명"
 category: 신조어
 thumbnail: "/images/손민수-뜻-X민수-유래-최근-신조어-간단-설명/spoon studios (4"
+draft: false
 ---
 
 손민수?, ~민수템? 무슨뜻일까?

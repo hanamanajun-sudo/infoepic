@@ -5,6 +5,7 @@ pubDate: 2024-03-21
 slug: "틱톡-FYP-뜻-사용하는-이유"
 category: 신조어
 thumbnail: "/images/틱톡-FYP-뜻-사용하는-이유/img-1.png"
+draft: false
 ---
 
 틱톡에 관심이 있어서 몇번 보다 보니 역시 이것도 중독성있어서 계속 보게 되더라ㅎㄷㄷ  

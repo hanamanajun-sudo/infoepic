@@ -5,6 +5,7 @@ pubDate: 2023-11-29T00:00:00.000Z
 slug: "would-should-could-차이점-뭐야-어감과-구분법"
 category: 신조어
 thumbnail: "/images/would-should-could-차이점-뭐야-어감과-구분법/img-1.png"
+draft: false
 ---
 
 오늘은 영어 would, should, could에 대해서 알아보려고 합니다. 영어에 보면 굉장히 많이 사용되는 단어인데요.  

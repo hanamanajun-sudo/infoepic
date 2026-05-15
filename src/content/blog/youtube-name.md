@@ -5,6 +5,7 @@ pubDate: 2019-11-21
 slug: "youtube-name"
 category: sns
 thumbnail: "https://t1.daumcdn.net/cfile/tistory/99F7434B5DD6124814"
+draft: false
 ---
 
 유튜브 채널이름 정할 때 해외 트래픽도 생각하시는 분 중에 이름을 어떻게 지어야 할까 고민하는 분들 있으시죠? 저도 그랬는데 이럴 때 보통 

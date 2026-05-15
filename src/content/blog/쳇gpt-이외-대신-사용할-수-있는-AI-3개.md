@@ -5,6 +5,7 @@ pubDate: 2024-09-30
 slug: "쳇gpt-이외-대신-사용할-수-있는-AI-3개"
 category: ai
 thumbnail: "/images/쳇gpt-이외-대신-사용할-수-있는-AI-3개/Gemini_Generated_Image_2fybk62fybk62fyb.png"
+draft: false
 ---
 
 요즘 실질적으로 도움이 되는 IT 꿀팁을 찾다 보면, 대화형 AI 서비스에 대한 관심이 부쩍 높아진 걸 체감하게 된다. 처음에는 쳇지피티(ChatGPT)만 있는 줄 알고 그것만 주구장창 썼는데, 시간이 지나자 구글이나 마이크로소프트의 빙에서도 훌륭한 대화형 AI 서비스를 경쟁적으로 내놓고 있어서 어느 것을 써야 할지, 어느 것이 성능이 좋을지 고민이 되더라

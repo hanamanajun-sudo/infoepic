@@ -5,6 +5,7 @@ pubDate: 2021-04-26T00:00:00.000Z
 slug: jfif-파일-jpg로-변환-하기2가지-방법-추천-프로그램X
 category: it
 thumbnail: "/images/jfif-파일-jpg로-변환-하기(2가지-방법-추천"
+draft: false
 ---
 
 인터넷에서 다운로드 받은 파일 중에 확장자가 jfif로 되어있는 파일이 있는데

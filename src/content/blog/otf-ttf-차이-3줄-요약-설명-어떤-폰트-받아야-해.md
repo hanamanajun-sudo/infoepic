@@ -5,6 +5,7 @@ pubDate: 2020-10-08T00:00:00.000Z
 slug: "otf-ttf-차이-3줄-요약-설명-어떤-폰트-받아야-해"
 category: 신조어
 thumbnail: "/images/otf-ttf-차이-3줄-요약-설명-어떤-폰트-받아야-해/img-1.png"
+draft: false
 ---
 
 ![otf ttf 차이 (3줄 요약 설명) 어떤 폰트 받아야 해? 이미지 1](/images/otf-ttf-차이-3줄-요약-설명-어떤-폰트-받아야-해/img-1.png)

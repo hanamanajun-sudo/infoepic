@@ -5,6 +5,7 @@ pubDate: 2020-11-02
 slug: "sm-걸그룹-에스파-aespa-4명-프로필-사진-소개"
 category: 엔터
 thumbnail: "/images/sm-걸그룹-에스파-aespa-4명-프로필-사진-소개/img.png"
+draft: false
 ---
 
 sm에서 레드벨벳 이후에 6년만에 나오는 4인조 걸그룹 에스파

@@ -5,6 +5,7 @@ pubDate: 2022-05-11
 slug: "톨레랑스-tolerance-뜻-간략-설명-프랑스가-톨레랑스의-나라인-이유"
 category: 신조어
 thumbnail: "/images/톨레랑스-tolerance-뜻-간략-설명-프랑스가-톨레랑스의-나라인-이유/img-1.jpg"
+draft: false
 ---
 
 tolerance 프랑스어(tolérance)로 톨레랑스 똘래랑스라고 적는데 원어 그대로 사용하는 경우가 있다.

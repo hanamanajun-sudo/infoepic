@@ -5,6 +5,7 @@ pubDate: 2020-02-21
 slug: "hoes-mad-뜻-어원-간단-의미-정리"
 category: 신조어
 thumbnail: "/images/hoes-mad-뜻-어원-간단-의미-정리/maxresdefault.jpg"
+draft: false
 ---
 
 외국 SNS나 사이트에서 자주 보이는 단어예요.

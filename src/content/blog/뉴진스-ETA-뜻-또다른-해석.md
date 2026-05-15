@@ -5,6 +5,7 @@ pubDate: 2023-07-28
 slug: "뉴진스-ETA-뜻-또다른-해석"
 category: 신조어
 thumbnail: "/images/뉴진스-ETA-뜻-또다른-해석/제목을 입력해주세요_-001 (12"
+draft: false
 ---
 
 뉴진스 노래중에 ETA라는 곡이 있다. 

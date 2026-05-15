@@ -5,6 +5,7 @@ pubDate: 2020-05-27
 slug: "ZV-1-Sony"
 category: 생활
 thumbnail: "/images/ZV-1-Sony/img-1.jpg"
+draft: false
 ---
 
 소니가 브이로그 용으로 완전 작정하고 만들었다는 **소니 신작 컴팩트 카메라 ZV1**

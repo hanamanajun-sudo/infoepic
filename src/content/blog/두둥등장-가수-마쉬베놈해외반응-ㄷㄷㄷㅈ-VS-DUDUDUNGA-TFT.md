@@ -5,6 +5,7 @@ pubDate: 2020-04-19
 slug: "두둥등장-가수-마쉬베놈해외반응-ㄷㄷㄷㅈ-VS-DUDUDUNGA-TFT"
 category: 엔터
 thumbnail: "/images/두둥등장-가수-마쉬베놈해외반응-ㄷㄷㄷㅈ-VS-DUDUDUNGA-TFT/img-1.jpg"
+draft: false
 ---
 
 요즘 인터넷에 가장 핫한 음악이 다름아닌 광고음악
