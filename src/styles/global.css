@@ -39,6 +39,11 @@ body {
 .prose strong, .prose b { font-weight: 700; }
 .prose em { font-style: italic; }
 
+/* Decap CMS 커스텀 구분선 */
+.prose hr.hr-solid { border: none; border-top: 2px solid var(--color-border-subtle); margin: 2rem 0; }
+.prose hr.hr-dashed { border: none; border-top: 2px dashed var(--color-border-subtle); margin: 2rem 0; }
+.prose hr.hr-thick  { border: none; border-top: 4px solid var(--color-text-muted);   margin: 2rem 0; }
+
 /* 모바일 기본 개선 */
 @media (max-width: 640px) {
   .prose { font-size: var(--text-base); }

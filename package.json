@@ -3,8 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "copy-cms": "node -e \"const fs=require('fs');fs.copyFileSync('node_modules/decap-cms/dist/decap-cms.js','public/admin/decap-cms.js')\"",
+    "dev": "npm run copy-cms && astro dev",
+    "build": "npm run copy-cms && astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@phosphor-icons/web": "^2.1.1",
+    "decap-cms": "^3.12.2",
     "node-html-parser": "^7.1.0",
     "pagefind": "^1.5.2",
     "turndown": "^7.2.4"

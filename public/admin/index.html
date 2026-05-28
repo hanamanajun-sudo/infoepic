@@ -10,6 +10,116 @@
   </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- decap-cms.js는 빌드 시 node_modules에서 복사됨 (npm run copy-cms) -->
+  <script src="/admin/decap-cms.js"></script>
+
+  <script>
+    // ─────────────────────────────────────────────
+    // 1. 구분선 — 실선
+    // ─────────────────────────────────────────────
+    CMS.registerEditorComponent({
+      id: 'hr-solid',
+      label: '구분선 ─ 실선',
+      fields: [],
+      pattern: /^<hr class="hr-solid">$/m,
+      fromBlock: () => ({}),
+      toBlock: () => '<hr class="hr-solid">',
+      toPreview: () => '<hr style="border:none;border-top:2px solid #e2e8f0;margin:2rem 0;">',
+    });
+
+    // ─────────────────────────────────────────────
+    // 2. 구분선 — 점선
+    // ─────────────────────────────────────────────
+    CMS.registerEditorComponent({
+      id: 'hr-dashed',
+      label: '구분선 ┄ 점선',
+      fields: [],
+      pattern: /^<hr class="hr-dashed">$/m,
+      fromBlock: () => ({}),
+      toBlock: () => '<hr class="hr-dashed">',
+      toPreview: () => '<hr style="border:none;border-top:2px dashed #cbd5e1;margin:2rem 0;">',
+    });
+
+    // ─────────────────────────────────────────────
+    // 3. 구분선 — 굵은 실선
+    // ─────────────────────────────────────────────
+    CMS.registerEditorComponent({
+      id: 'hr-thick',
+      label: '구분선 ━ 굵은선',
+      fields: [],
+      pattern: /^<hr class="hr-thick">$/m,
+      fromBlock: () => ({}),
+      toBlock: () => '<hr class="hr-thick">',
+      toPreview: () => '<hr style="border:none;border-top:4px solid #94a3b8;margin:2rem 0;">',
+    });
+
+    // ─────────────────────────────────────────────
+    // 4. 텍스트 색상
+    // ─────────────────────────────────────────────
+    CMS.registerEditorComponent({
+      id: 'text-color',
+      label: '텍스트 색상',
+      fields: [
+        {
+          name: 'text',
+          label: '텍스트 내용',
+          widget: 'string',
+        },
+        {
+          name: 'color',
+          label: '색상 선택',
+          widget: 'select',
+          options: [
+            { label: '🔴 빨강',   value: '#ef4444' },
+            { label: '🟠 주황',   value: '#f97316' },
+            { label: '🟡 노랑',   value: '#eab308' },
+            { label: '🟢 초록',   value: '#22c55e' },
+            { label: '🔵 파랑',   value: '#3b82f6' },
+            { label: '🟣 보라',   value: '#a855f7' },
+            { label: '⚫ 회색',   value: '#64748b' },
+            { label: '🩷 핑크',   value: '#ec4899' },
+          ],
+        },
+      ],
+      pattern: /<span data-color style="color:(#[0-9a-fA-F]{6})">([\s\S]*?)<\/span>/,
+      fromBlock: (match) => ({ color: match[1], text: match[2] }),
+      toBlock: ({ text, color }) =>
+        `<span data-color style="color:${color}">${text || '텍스트를 입력하세요'}</span>`,
+      toPreview: ({ text, color }) =>
+        `<span style="color:${color}">${text || '텍스트를 입력하세요'}</span>`,
+    });
+
+    // ─────────────────────────────────────────────
+    // 5. 텍스트 크기
+    // ─────────────────────────────────────────────
+    CMS.registerEditorComponent({
+      id: 'text-size',
+      label: '텍스트 크기',
+      fields: [
+        {
+          name: 'text',
+          label: '텍스트 내용',
+          widget: 'string',
+        },
+        {
+          name: 'size',
+          label: '크기 선택',
+          widget: 'select',
+          options: [
+            { label: '소 — 14px',  value: '0.875rem' },
+            { label: '중 — 18px',  value: '1.125rem' },
+            { label: '대 — 20px',  value: '1.25rem'  },
+            { label: '특대 — 24px', value: '1.5rem'  },
+          ],
+        },
+      ],
+      pattern: /<span data-size style="font-size:([\d.]+rem)">([\s\S]*?)<\/span>/,
+      fromBlock: (match) => ({ size: match[1], text: match[2] }),
+      toBlock: ({ text, size }) =>
+        `<span data-size style="font-size:${size}">${text || '텍스트를 입력하세요'}</span>`,
+      toPreview: ({ text, size }) =>
+        `<span style="font-size:${size}">${text || '텍스트를 입력하세요'}</span>`,
+    });
+  </script>
 </body>
 </html>
