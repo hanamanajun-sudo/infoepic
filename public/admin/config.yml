@@ -23,11 +23,7 @@ collections:
     slug: "{{fields.title}}"
     preview_path: "entry/{{slug}}"
 
-    sortable_fields:
-      fields: [pubDate, title]
-      default:
-        field: pubDate
-        direction: Descending
+    sortable_fields: [pubDate, title]
 
     view_filters:
       - label: 공개 글
