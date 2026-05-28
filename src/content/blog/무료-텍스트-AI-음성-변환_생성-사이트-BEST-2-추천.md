@@ -21,7 +21,7 @@ draft: false
 **저**도 유튜브에 사용할 글자를 음성으로 바꿔주는 프로그램을 여러 가지 찾아보고 사용해 보았는데... 그중에서 무료로, 그리고 가장 자연스러운 **무료 텍스트 AI 음성 변환 사이트 2곳**을 추천해 드리려고 한다.  
   
 
-![무료 텍스트 AI 음성 변환/생성 사이트 BEST 2 추천 이미지 1](/images/무료-텍스트-AI-음성-변환_생성-사이트-BEST-2-추천/Gemini_Generated_Image_pmp4hjpmp4hjpmp4 (1).png)
+![무료 텍스트 AI 음성 변환/생성 사이트 BEST 2 추천 이미지 1](/images/무료-텍스트-AI-음성-변환_생성-사이트-BEST-2-추천/Gemini_Generated_Image_pmp4hjpmp4hjpmp4-(1).png)
 
 ## **실제 써보고 추천하는 무료 AI 음성 변환 사이트 2곳**
 

@@ -4,7 +4,7 @@ description: "브랫gpt라는 AI서비스가 오픈했는데 성격이 나쁜 �
 pubDate: 2023-05-24
 slug: "브랫GPT-Brat-GPT-주소-사용-후기"
 category: ai
-thumbnail: "/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 36 58.png"
+thumbnail: "/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-36-58.png"
 draft: false
 ---
 
@@ -14,26 +14,26 @@ draft: false
 
 최초 화면에서 이메일 등록은 하지 않아도 됩니다. 오른쪽 위에 있는 닫기 버튼 누르면 메일 주소창 입력란 무시하고 들어가집니다.
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 1](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 36 58.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 1](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-36-58.png)
 
 ✔회원 가입없이 바로 사용가능해요
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 2](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 37 30.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 2](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-37-30.png)
 
 ✔영어로만 대화가 가능하다고 하는데 한국어로도 문제없이 대화가 가능했습니다. 
 
 ✔일상적인 대화는 컨셉에 입각해서 건방지고 약한 수준의 비난조로 말하는데  
 궁금한것을 물어보면 또 대답을 잘해줍니다.
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 3](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 38 40.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 3](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-38-40.png)
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 4](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 40 47.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 4](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-40-47.png)
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 5](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 43 18.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 5](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-43-18.png)
 
 ✔다만 정보가 다소 부정확하거나 최신 정보가 아닌 것은 아쉽네요. 한번 재미를 위한 사용정도로 끝날것 같습니다. 
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 6](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 53 45.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 6](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-53-45.png)
 
 ✔창의성도 컨셉이 붙어있어서 좀 한정적입니다.
 
@@ -47,7 +47,7 @@ draft: false
 
 ### ****■**기타 BratGPT 대화 후기**
 
-![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 7](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24 17 43 50.png)
+![브랫GPT (Brat GPT) 주소 & 사용 후기 이미지 7](/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-43-50.png)
 
 왜 도망가니? 인간승리  
   
