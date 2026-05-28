@@ -106,7 +106,33 @@
     });
 
     // ─────────────────────────────────────────────
-    // 5. 텍스트 크기
+    // 5. 새 탭에서 열기 링크
+    // ─────────────────────────────────────────────
+    CMS.registerEditorComponent({
+      id: 'link-new-tab',
+      label: '🔗 새 탭 링크',
+      fields: [
+        {
+          name: 'text',
+          label: '링크 텍스트',
+          widget: 'string',
+        },
+        {
+          name: 'url',
+          label: 'URL',
+          widget: 'string',
+        },
+      ],
+      pattern: /<a href="([^"]+)" target="_blank" rel="noopener noreferrer">([\s\S]*?)<\/a>/,
+      fromBlock: (match) => ({ url: match[1], text: match[2] }),
+      toBlock: ({ text, url }) =>
+        `<a href="${url || '#'}" target="_blank" rel="noopener noreferrer">${text || url || '링크'}</a>`,
+      toPreview: ({ text, url }) =>
+        `<a href="${url || '#'}" target="_blank" rel="noopener noreferrer" style="color:#3b82f6;">${text || url || '링크'}</a>`,
+    });
+
+    // ─────────────────────────────────────────────
+    // 6. 텍스트 크기
     // ─────────────────────────────────────────────
     CMS.registerEditorComponent({
       id: 'text-size',
