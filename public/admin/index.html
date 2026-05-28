@@ -10,6 +10,22 @@
   </style>
 </head>
 <body>
+  <!-- 관리자 목록 기본 정렬: pubDate 내림차순 (최신순) — 사이트와 동일하게 -->
+  <script>
+    (function () {
+      var SORT_KEY = 'decap-cms.entries.sort';
+      try {
+        var current = localStorage.getItem(SORT_KEY);
+        // 사용자가 수동으로 바꾼 적 없을 때만 기본값 주입
+        if (!current) {
+          localStorage.setItem(SORT_KEY, JSON.stringify({
+            blog: { pubDate: { key: 'pubDate', direction: 'Descending', index: 0 } }
+          }));
+        }
+      } catch (e) { /* localStorage 차단 환경 무시 */ }
+    })();
+  </script>
+
   <!-- decap-cms.js는 빌드 시 node_modules에서 복사됨 (npm run copy-cms) -->
   <script src="/admin/decap-cms.js"></script>
 
