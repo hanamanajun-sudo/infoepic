@@ -76,7 +76,6 @@ const catBg     = category ? (CAT_BG[category]    ?? 'thumb-ent')    : 'thumb-en
     <article class="post-card-body">
       <div class="post-card-meta">
         {catLabel && <span class={`badge ${catColor}`}>{catLabel}</span>}
-        {dateStr && <time class="post-card-date">{dateStr}</time>}
       </div>
       <h2 class="post-card-title">{title}</h2>
       {description && <p class="post-card-desc">{description}</p>}
