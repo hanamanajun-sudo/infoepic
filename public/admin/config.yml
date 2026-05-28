@@ -51,6 +51,14 @@ collections:
         format: "YYYY-MM-DDTHH:mm:ss.000Z"
         required: false
 
+      - label: "수정일 (업데이트)"
+        name: updatedDate
+        widget: datetime
+        time_format: false
+        format: "YYYY-MM-DDTHH:mm:ss.000Z"
+        required: false
+        hint: "글을 수정했을 때만 입력. 입력하면 본문에 '업데이트: n월 n일' 표시 + Schema dateModified 반영"
+
       - label: "비공개 (draft)"
         name: draft
         widget: boolean

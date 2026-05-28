@@ -28,16 +28,20 @@ interface Props {
   description?: string;
   slug: string;
   pubDate?: Date;
+  updatedDate?: Date;
   headings?: Heading[];
   category?: string;
   relatedPosts?: RelatedPost[];
 }
 
-const { title, description, slug, pubDate, headings = [], category, relatedPosts = [] } = Astro.props;
+const { title, description, slug, pubDate, updatedDate, headings = [], category, relatedPosts = [] } = Astro.props;
 
 const SITE = 'https://infoepic.com';
 const formattedDate = pubDate
   ? pubDate.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })
+  : null;
+const formattedUpdatedDate = updatedDate
+  ? updatedDate.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })
   : null;
 
 const jsonLd = {
@@ -47,7 +51,7 @@ const jsonLd = {
   description: description ?? '',
   url: `${SITE}/entry/${slug}`,
   datePublished: pubDate?.toISOString() ?? '',
-  dateModified: pubDate?.toISOString() ?? '',
+  dateModified: (updatedDate ?? pubDate)?.toISOString() ?? '',
   author: { '@type': 'Organization', name: 'infoepic', url: SITE },
   publisher: {
     '@type': 'Organization',
@@ -73,12 +77,20 @@ const jsonLd = {
 
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        {formattedDate && (
-          <time class="post-date" datetime={pubDate?.toISOString()}>
-            <i class="ph ph-calendar-blank" aria-hidden="true"></i>
-            {formattedDate}
-          </time>
-        )}
+        <div class="post-meta">
+          {formattedDate && (
+            <time class="post-date" datetime={pubDate?.toISOString()}>
+              <i class="ph ph-calendar-blank" aria-hidden="true"></i>
+              {formattedDate}
+            </time>
+          )}
+          {formattedUpdatedDate && (
+            <time class="post-updated" datetime={updatedDate?.toISOString()}>
+              <i class="ph ph-pencil-simple" aria-hidden="true"></i>
+              업데이트: {formattedUpdatedDate}
+            </time>
+          )}
+        </div>
       </header>
 
       <TOC headings={headings} />
@@ -123,11 +135,23 @@ const jsonLd = {
     overflow-wrap: break-word;
   }
 
-  .post-date {
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .post-date,
+  .post-updated {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
     font-size: var(--text-sm);
     color: var(--color-text-muted);
+  }
+
+  .post-updated {
+    color: var(--color-primary);
   }
 </style>
