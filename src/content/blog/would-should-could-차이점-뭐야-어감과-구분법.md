@@ -1,27 +1,25 @@
 ---
-title: "would, should, could 차이점 뭐야? (어감과 구분법)"
-description: "오늘은 영어 would, should, could에 대해서 알아보려고 합니다. 영어에 보면 굉장히 많이 사용되는 단어인데요. 중고등학교 때에 공부를 제대로 안해서 정확히 알지 못해 지금이로도 공부하려고 합니다."
+title: would should could 차이 뜻 정리 (뉘앙스·예문 포함)
+description: 오늘은 영어 would, should, could에 대해서 알아보려고 합니다. 영어에 보면 굉장히 많이 사용되는
+  단어인데요. 중고등학교 때에 공부를 제대로 안해서 정확히 알지 못해 지금이로도 공부하려고 합니다.
 pubDate: 2023-11-29T00:00:00.000Z
-slug: "would-should-could-차이점-뭐야-어감과-구분법"
-category: 신조어
-thumbnail: "/images/would-should-could-차이점-뭐야-어감과-구분법/img-1.png"
+updatedDate: 2026-05-31T00:00:00.000+09:00
 draft: false
+slug: would-should-could-차이점-뭐야-어감과-구분법
+category: 신조어
+thumbnail: /images/would-should-could-차이점-뭐야-어감과-구분법/img-1.png
 ---
-
-오늘은 영어 would, should, could에 대해서 알아보려고 합니다. 영어에 보면 굉장히 많이 사용되는 단어인데요.  
+오늘은 영어 would, should, could에 대해서 알아보려고 합니다. 영어에 보면 굉장히 많이 사용되는 단어인데요.\
 중고등학교 때에 공부를 제대로 안해서 정확히 알지 못해 지금이로도 공부하려고 합니다.
 
-  
 목표는 실제로 사용 할 수 있도록 그리고 들었을 때에 이해 할수 있도록 차이점, 구분하는 방법에 대해서 기억하는 것입니다. 국내, 해외 사이트를 돌며 조사하고 정리하였습니다.
 
 ![would, should, could 차이점 뭐야? (어감과 구분법) 이미지 1](/images/would-should-could-차이점-뭐야-어감과-구분법/img-1.png)
 
-###   
 **would, should, could가 중요한 이유**
 
 먼저 설명에 앞서 위 단어는 모두 조동사 입니다.
 
-####   
 **조동사란?**
 
 조동사는 조(助) 즉 보조한다는 뜻입니다. 주가되는 동사를 도와주는 **보조 동사**를 의미합니다.
@@ -30,7 +28,7 @@ draft: false
 
 사람들과 대화 할 때에도 좀더 깊게 마음을 전달하고 다양하게 표현할수 있습니다.
 
-### **would, should, could 늬앙스, 한국말로 치면**
+### would should could 한국어 뉘앙스 비교
 
 내가 확신하는것인가 아니면 살짝 부드럽게 말할것인가를 생각하면 된다.
 
@@ -40,41 +38,33 @@ draft: false
 
 **나 내일 모임 못 갈 것 같아.** 라고 가지 못한다고 전하지만 약간의 가능성은 남아있는 표현이 있죠? 애매하다고 싫어하는 사람도 있지만 뉘앙스를 전달하는 중요한 표현입니다. 이런 약간 모호하게 하는 표현이 **would, should, could** 라고 생각하면 편합니다.
 
-### **✔ would** 뜻과 사용법
+### **✔** would 뜻과 예문 — 확신 없는 의지와 정중한 표현
 
 I will: 나는 할 것이다. (확신, 예측)
 
 I would: 나 할 것 같아, 나 할거야(근데 안할지도 몰라)
 
-  
 추가로
 
 I want: 나는 원한다. 나는 가고 싶다. 하고 싶다. 갖고 싶다.
 
 I would like: 있으면 좋겠다. 갔으면 좋겠다. 했으면 좋겠다. 
 
-이것은 무지에서 한발 내딛는 대략적인 이해를 위한 것입니다.  
-would에 대한 좀 더 다양한 표현은 아래 블로그 내용을 참고하세요.  
-[https://artoflanguage.tistory.com/10](https://artoflanguage.tistory.com/10)
+would는 과거의 습관을 말할 때도 자주 쓰인다. "어렸을 때 나는 매일 공원에서 놀곤 했어" 를 영어로 하면 "I would play in the park every day when I was young." 이런 식으로 지금은 아니지만 과거에 반복적으로 했던 행동을 부드럽게 회상할 때 딱이다. 또 부탁할 때도 would를 쓰면 훨씬 정중해진다. "Would you help me?" 는 "Can you help me?" 보다 한 단계 더 공손한 표현이다.
 
-### **✔** **should 뜻과 사용법**
+### **✔** should 뜻과 예문 — 권유·충고·후회 표현
 
-I must / I have to: 나 해야만 해 (꼭, 반드시)  
-I should: 나 해야될 것 같아. 나 하는게 좋을것 같아. 나 해야돼 (근데 반드시는 아니야)
+I must / I have to: 나 해야만 해 (꼭, 반드시)\
+I should: 나 해야될 것 같아. 나 하는게 좋을것 같아. 나 해야돼 (근데 반드시는 아니야)\
+\
+should는 충고나 권유를 할 때 가장 자주 등장한다. "너 병원 가봐야 할 것 같아" 는 "You should see a doctor." 상대방에게 강요하는 게 아니라 걱정하는 마음을 담아 부드럽게 권하는 뉘앙스다. 반대로 후회를 표현할 때도 쓰인다. "그때 더 열심히 공부할 걸" 은 "I should have studied harder." 이미 지나간 일에 대한 아쉬움을 담는 표현으로, 일상 대화에서 정말 많이 나오는 패턴이다.
 
-다양한 should 용법 공부하려면 아래   
-[https://m.blog.naver.com/hackersingang/221312532921](https://m.blog.naver.com/hackersingang/221312532921)
-
-### **✔** **could** 뜻과 사용법
+### **✔** **could 뜻과 예문 — 가능성과 정중한 요청**
 
 I can: 나는 할수 있어 (확실히 할수 있어)
 
-I could: 나 할수 있을것 같아. 나 할수 있어(근데 못할수도 있어)
+I could: 나 할수 있을것 같아. 나 할수 있어(근데 못할수도 있어)\
+\
+could는 가능성을 열어두거나 정중하게 요청할 때 특히 유용하다. "혹시 창문 좀 닫아줄 수 있어?" 를 영어로 하면 "Could you close the window?" can을 써도 되지만 could를 쓰면 훨씬 부드럽고 예의 바른 인상을 준다. 또한 과거의 능력을 말할 때도 쓰인다. "나 어릴 때 수영 엄청 잘했는데" 는 "I could swim really well when I was young." 지금은 어떤지 모르지만 그때는 할 수 있었다는 뉘앙스가 담긴다.
 
-[https://m.blog.naver.com/tkfnxh/221861821271](https://m.blog.naver.com/tkfnxh/221861821271)
-
-  
-  
-참고 문서: 더쿠
-
-[https://theqoo.net/hot/3018393492?page=3](https://theqoo.net/hot/3018393492?page=3)
+이것은 무지에서 한발 내딛는 대략적인 이해를 위한 것입니다.
