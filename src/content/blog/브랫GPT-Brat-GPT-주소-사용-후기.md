@@ -1,11 +1,12 @@
 ---
-title: "브랫GPT (Brat GPT) 주소 & 사용 후기"
-description: "브랫gpt라는 AI서비스가 오픈했는데 성격이 나쁜 컨셉으로 악마와 같은 쌍둥이라는 설정이 붙어있다는 글을 보고 바로 사용해 보았습니다. 사용 후기와 정보를 기록해 보았습니다."
+title: 브랫GPT (Brat GPT) 주소 & 사용 후기
+description: 브랫gpt라는 AI서비스가 오픈했는데 성격이 나쁜 컨셉으로 악마와 같은 쌍둥이라는 설정이 붙어있다는 글을 보고 바로
+  사용해 보았습니다. 사용 후기와 정보를 기록해 보았습니다.
 pubDate: 2023-05-24
-slug: "브랫GPT-Brat-GPT-주소-사용-후기"
+slug: 브랫GPT-Brat-GPT-주소-사용-후기
+draft: true
 category: ai
-thumbnail: "/images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-36-58.png"
-draft: false
+thumbnail: /images/브랫GPT-Brat-GPT-주소-사용-후기/2023-05-24-17-36-58.png
 ---
 
 브랫gpt라는 AI서비스가 오픈했는데 성격이 나쁜 컨셉으로 악마와 같은 쌍둥이라는 설정이 붙어있다는 글을 보고 바로 사용해 보았습니다. 사용 후기와 정보를 기록해 보았습니다.
