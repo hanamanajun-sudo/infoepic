@@ -1,11 +1,11 @@
 ---
-title: "넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc)"
-description: "넥플릭스 확장 프로그램으로 크롬에서 설치하시면 됩니다."
+title: 넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc)
+description: 넥플릭스 확장 프로그램으로 크롬에서 설치하시면 됩니다.
 pubDate: 2021-05-09
-slug: "넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc"
+slug: 넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc
+draft: true
 category: it
-thumbnail: "/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-1.png"
-draft: false
+thumbnail: /images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-1.png
 ---
 
 넷플릭스에서 예고편만 보고 골랐다가 실망한 적이 꽤 있다. 그때 알게 된 크롬 확장 프로그램인데, IMDb 평점을 넷플릭스 화면에서 바로 볼 수 있어서 영화 선택 실패가 많이 줄었다. 기능이 꽤 유용해서 한 번 삭제했다가 다시 설치하기도 했다.
