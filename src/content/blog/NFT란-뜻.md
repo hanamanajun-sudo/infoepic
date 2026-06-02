@@ -1,11 +1,11 @@
 ---
-title: "NFT란? (뜻/ 돈버는 방법/ 마켓 종류/ 적용된 사례/ 주목받는 이유)"
-description: "최근 몇년 사이에 화제가 되고 있는 NFT에 대해서 정보를 모으고 정리하려고 합니다."
+title: NFT란? (뜻/ 돈버는 방법/ 마켓 종류/ 적용된 사례/ 주목받는 이유)
+description: 최근 몇년 사이에 화제가 되고 있는 NFT에 대해서 정보를 모으고 정리하려고 합니다.
 pubDate: 2021-12-16T00:00:00.000Z
-slug: "NFT란-뜻"
+slug: NFT란-뜻
+draft: true
 category: ai
-thumbnail: "/images/NFT란-뜻/img-1.png"
-draft: false
+thumbnail: /images/NFT란-뜻/img-1.png
 ---
 
 최근 몇년 사이에 화제가 되고 있는 NFT에 대해서 정보를 모으고 정리하려고 합니다. 
