@@ -8,96 +8,62 @@ thumbnail: "/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-N
 draft: false
 ---
 
-넥플릭스 확장 프로그램으로 크롬에서 설치하시면 됩니다. 
+넷플릭스에서 예고편만 보고 골랐다가 실망한 적이 꽤 있다. 그때 알게 된 크롬 확장 프로그램인데, IMDb 평점을 넷플릭스 화면에서 바로 볼 수 있어서 영화 선택 실패가 많이 줄었다. 기능이 꽤 유용해서 한 번 삭제했다가 다시 설치하기도 했다.
 
-주소는 아래
+크롬 웹스토어에서 설치할 수 있다:
 
-[chrome.google.com/webstore/detail/enhancer-for-netflix-crun/dbpjfmehfpcgmlpfnfilcnhbckmecmca](https://chrome.google.com/webstore/detail/enhancer-for-netflix-crun/dbpjfmehfpcgmlpfnfilcnhbckmecmca)
+[Enhancer for Netflix, Crunchyroll 설치 링크](https://chrome.google.com/webstore/detail/enhancer-for-netflix-crun/dbpjfmehfpcgmlpfnfilcnhbckmecmca)
 
-![넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc) 이미지 1](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-1.png)
+![넷플릭스 확장 프로그램 설치 방법 이미지 1](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-1.png)
 
-(설치 방법은 간단합니다. 혹 막히시는 분들을 위해서  
-아래에 적어 놓을 테니 중간에 막히면 해당 포스트에서 확인하세요)
+## **주요 기능 3가지**
 
----
+### **1. IMDb 영화 평점 표시**
 
----
+보고 싶은 영화에 마우스를 올리면 IMDb 평점이 바로 뜬다. 투표 인원이 워낙 많아서 참고 기준으로 믿을 만하다.
 
-## **Enhancer for Netflix, Crunchyroll, etc 주요 기능** 
+**평점 대략적인 기준 (이토랜트 커뮤니티 참고):**
 
-설치 하려고 했던 이유인 
+> 8 — 명작
+> 7 — 쏘쏘, 최소한 타임킬링
+> 6 — 취향따라 재밌을 수도
+> 5 — 실망
+> 4 — 존망
+>
+> 8.5가 거의 끝판왕급. 영어권 기준이라 한국 취향과 약간 다를 때도 있지만 대부분 비슷하다.
 
-### **1\. IMDb 영화 평점 점수를 보여준다.** 
+### **2. 숨겨진 넷플릭스 장르 카테고리 표시**
 
-보고 싶은 영화를 다 보고 나면 그다음에는 예고편을 보고 결정을 해야 하는데 재미없는 영화도 섞여있어서 실패하는 경우도 많이 있다. 
+넷플릭스는 장르 카테고리를 숨겨두는데, 이 확장 프로그램을 설치하면 숨겨진 장르 필터가 나타난다. 원하는 장르를 바로 골라볼 수 있어서 편하다.
 
-워낙 투표인원도 많고 점수도 비교적 믿을만하니 영화 선택에 참고가 된다. 영어권 사용자들이 사용하다보니 한국 취향과 약간 차이가 날 때도 있는데 대부분 결과는 비슷하다.
+### **3. 시청 기록 표시**
 
-아래는  
+이미 본 영화나 드라마는 회색으로 표시된다. 예전에 뭘 봤는지 헷갈릴 때 유용하다.
 
-이토랜트 커뮤니티에 어느분이 올려준 점수  참고 사항
+## **설치 방법**
 
-#### 넷플릭스 평점 참고기준
+**1. 크롬 웹스토어에서 설치**
 
-> 8-명작  
-> 7-쏘쏘 최소한 타임킬링  
-> 6-취향따라 재밌을 수도  
-> 5-실망  
-> 4-존망  
->   
-> 이하생략  
-> 8.5가 거의 끝판왕급이라고 보면 된다고 합니다. 
+![설치 방법 이미지 2](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-2.png)
 
-### **2\. 넷플릭스 장르 카테고리 보이기** 
+**2. 넷플릭스 접근 허용**
 
-넷플릭스는 왜그런지 카테고리를 보여주지 않습니다. 존재하는데도..
+![설치 방법 이미지 3](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-3.png)
 
-헤매다가 더 영화를 많이 보게 하려고 그러는지 다른 이유가 있는건지 모르겠지만..
+**3. 확장 프로그램 활성화 후 크롬 상단 아이콘 클릭**
 
-어찌되었든 이 확장프로그램을 깔면 숨겨져 있던 넷플릭스 영화 카테고리가 나옵니다. 
+**4. 4개 기능 허용 설정**
 
-(속이 다 후련하네요. )
+![설치 방법 이미지 4](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-4.png)
 
-### 3\. 내가 이용했던 기록을 저장해서 기존에 본 영화를 회색으로 표시합니다.
+상단 2개는 기본으로 허용 상태이고, 아래 2개는 별도 사이트에서 로그인해야 한다. 자신의 넷플릭스 시청 기록을 연동하는 허용 과정이다.
 
----
+설치가 끝나면 넷플릭스 썸네일에 마우스를 올렸을 때 평점이 보인다.
 
----
+![설치 완료 이미지 5](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-5.png)
 
-## **넷플릭스 Enhancer for Netflix, Crunchyroll 확장 프로그램 설치 방법**
+IMDb 평점 외에 **Simkl 점수**도 함께 표시된다. Simkl는 이 서비스 이용자들이 직접 매긴 평점이고, **votes**는 투표 참여 인원, **Drop rate**는 영상을 보다가 중간에 그만둔 사람의 비율이다. Drop rate가 높으면 결말까지 재밌게 보기 어려운 영상일 가능성이 있다.
 
-**1\. 크롬 확장프로그램에서 해당 프로그램 설치**
+![장르 카테고리 이미지 6](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-6.png)
 
-![넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc) 이미지 2](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-2.png)
-
-**2\. 넷플릭스 확장프로그램 허용**
-
-![넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc) 이미지 3](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-3.png)
-
-**3\. 설치한 확장프로그램 활성화 시키고 크롬 브라우저 상단의 표시 클릭**
-
-**4\. 넷플릭스  4개 기능 허용**
-
-![넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc) 이미지 4](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-4.png)
-
-**5\. 상단 2개는 기본으로 허용상태인데 아래 두개는 허용을 해야 하고 별도의 사이트에 가서 로그인해야 한다.** 
-
-(본인의 넷플릭스 본 기록을 보내는 것을 허용해야 한다.)
-
-이제 다 됐다.
-
-이렇게 하면 넷플릭스 영화 썸네일에 마우스 오버 할 때에 영화 평점 점수가 보인다. 
-
-![넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc) 이미지 5](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-5.png)
-
-IMDB점수 확인이 가능합니다. 개인적으로는 이 기능 때문에 삭제 했다가 다시 설치했어요.
-
-Simkl는 해당 어플을 사용하는 사람들이 매긴 점수 등급
-
-(votes는 투표한 사람의 수를 나타냅니다.)
-
-Drop rate는 해당 영상을 보다가 그만둔 사람들의 비율을 나타냅니다.
-
-넷플릭스 확장 어플 기능 설명에서 말했듯이 숨겨져있던 영화 드라마 애니메이션 장르 카테고리도 나온다.   
-
-![넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crunchyroll, etc) 이미지 6](/images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-6.png)
+숨겨져 있던 영화·드라마·애니메이션 장르 카테고리도 이렇게 나온다.
