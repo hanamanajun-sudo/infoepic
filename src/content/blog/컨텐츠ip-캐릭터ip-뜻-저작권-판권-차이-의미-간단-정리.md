@@ -4,10 +4,11 @@ description: "컨텐츠 IP, 캐릭터 IP 뜻과 지적재산권 종류 정리. �
 pubDate: 2020-02-03
 slug: "컨텐츠ip-캐릭터ip-뜻-저작권-판권-차이-의미-간단-정리"
 category: 신조어
+thumbnail: "/images/컨텐츠ip-캐릭터ip-뜻-저작권-판권-차이-의미-간단-정리/img-1.jpg"
 draft: false
 ---
 
-![IP뜻 - 컨텐츠ip, 캐릭터ip 뜻/ 저작권, 판권 차이 (의미 간단 정리) 이미지 1](https://t1.daumcdn.net/cfile/tistory/990CE33D5E392E8A06)
+![IP뜻 - 컨텐츠ip, 캐릭터ip 뜻/ 저작권, 판권 차이 (의미 간단 정리) 이미지 1](/images/컨텐츠ip-캐릭터ip-뜻-저작권-판권-차이-의미-간단-정리/img-1.jpg)
 
 ## 컨텐츠ip 캐릭터ip 란? 의미 간단 정리
 
