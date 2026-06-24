@@ -3,3 +3,6 @@ https://www.infoepic.com/* https://infoepic.com/:splat 301!
 
 # trailing slash 제거: /entry/slug/ → /entry/slug
 /entry/:slug/ /entry/:slug 301
+
+# sitemap.xml → sitemap-index.xml (Astro 기본 파일명 차이)
+/sitemap.xml /sitemap-index.xml 301
