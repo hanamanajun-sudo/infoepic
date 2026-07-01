@@ -3,7 +3,7 @@ title: 넷플릭스 확장 프로그램 설치 방법(Enhancer for Netflix, Crun
 description: 넥플릭스 확장 프로그램으로 크롬에서 설치하시면 됩니다.
 pubDate: 2021-05-09
 slug: 넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc
-draft: true
+draft: false
 category: it
 thumbnail: /images/넷플릭스-확장-프로그램-설치-방법Enhancer-for-Netflix-Crunchyroll-etc/img-1.png
 ---
