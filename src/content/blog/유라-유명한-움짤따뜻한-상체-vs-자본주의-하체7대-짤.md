@@ -5,7 +5,7 @@ pubDate: 2020-08-11T00:00:00.000Z
 slug: "유라-유명한-움짤따뜻한-상체-vs-자본주의-하체7대-짤"
 draft: false
 category: 신조어
-thumbnail: "/images/유라-유명한-움짤따뜻한-상체-vs-자본주의-하체7대-짤/img-1.jpg"
+thumbnail: "/images/유라-유명한-움짤따뜻한-상체-vs-자본주의-하체7대-짤/thumb.jpg"
 ---
 
 ## **걸스데이 유라 유명 짤 모음**

@@ -5,7 +5,7 @@ description: "퍼사드 또는 파사드 영어로는 facade로 적지만 원래
 pubDate: 2022-03-17
 slug: "파사드-뜻-간략-설명-facadefaçade-의미"
 category: 신조어
-thumbnail: "/images/파사드-뜻-간략-설명-facadefaçade-의미/img.jpg"
+thumbnail: "/images/파사드-뜻-간략-설명-facadefaçade-의미/thumb.jpg"
 ---
 
 ## **파사드 뜻**

@@ -4,7 +4,7 @@ description: "유튜브 숏츠에 보다보니 시그마(sigma) 라는 트렌드
 pubDate: 2023-02-21T00:00:00.000Z
 slug: "시그마-밈-뜻-뭐야-sigma-의미와-유래"
 category: 신조어
-thumbnail: "/images/시그마-밈-뜻-뭐야-sigma-의미와-유래/img-1.png"
+thumbnail: "/images/시그마-밈-뜻-뭐야-sigma-의미와-유래/thumb.jpg"
 draft: false
 ---
 

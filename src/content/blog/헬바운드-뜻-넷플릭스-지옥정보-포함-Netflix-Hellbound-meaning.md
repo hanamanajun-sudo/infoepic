@@ -4,7 +4,7 @@ description: "넷플릭스(Netflix) 새로운 작품 지옥의 영어 제목 hel
 pubDate: 2021-10-27
 slug: "헬바운드-뜻-넷플릭스-지옥정보-포함-Netflix-Hellbound-meaning"
 category: 신조어
-thumbnail: "/images/헬바운드-뜻-넷플릭스-지옥정보-포함-Netflix-Hellbound-meaning/img-1.png"
+thumbnail: "/images/헬바운드-뜻-넷플릭스-지옥정보-포함-Netflix-Hellbound-meaning/thumb.jpg"
 draft: false
 ---
 

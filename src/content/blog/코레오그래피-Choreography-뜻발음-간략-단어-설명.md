@@ -5,7 +5,7 @@ description: "* 코리아그러피가 영어 발음에 가깝고 한국식으로
 pubDate: 2020-11-05
 slug: "코레오그래피-Choreography-뜻발음-간략-단어-설명"
 category: 신조어
-thumbnail: "/images/코레오그래피-Choreography-뜻발음-간략-단어-설명/img.png"
+thumbnail: "/images/코레오그래피-Choreography-뜻발음-간략-단어-설명/thumb.jpg"
 ---
 
 ![코레오그래피 Choreography 뜻/발음 (간략 단어 설명) 이미지 1](/images/코레오그래피-Choreography-뜻발음-간략-단어-설명/img.png)

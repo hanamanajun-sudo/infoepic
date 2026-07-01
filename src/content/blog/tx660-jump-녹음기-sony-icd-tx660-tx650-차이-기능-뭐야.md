@@ -4,7 +4,7 @@ description: "녹음기 고르고 고르다가 드디어 정했다."
 pubDate: 2022-06-26
 slug: "tx660-jump-녹음기-sony-icd-tx660-tx650-차이-기능-뭐야"
 category: it
-thumbnail: "/images/tx660-jump-녹음기-sony-icd-tx660-tx650-차이-기능-뭐야/img-1.png"
+thumbnail: "/images/tx660-jump-녹음기-sony-icd-tx660-tx650-차이-기능-뭐야/thumb.jpg"
 draft: false
 ---
 

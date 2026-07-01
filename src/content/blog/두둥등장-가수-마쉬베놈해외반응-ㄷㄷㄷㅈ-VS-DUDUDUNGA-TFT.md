@@ -4,7 +4,7 @@ description: "TFT 광고음악 두둥등장(ㄷㄷㄷㅈ) 해외 반응과 가�
 pubDate: 2020-04-19
 slug: "두둥등장-가수-마쉬베놈해외반응-ㄷㄷㄷㅈ-VS-DUDUDUNGA-TFT"
 category: 엔터
-thumbnail: "/images/두둥등장-가수-마쉬베놈해외반응-ㄷㄷㄷㅈ-VS-DUDUDUNGA-TFT/img-1.jpg"
+thumbnail: "/images/두둥등장-가수-마쉬베놈해외반응-ㄷㄷㄷㅈ-VS-DUDUDUNGA-TFT/thumb.jpg"
 draft: false
 ---
 

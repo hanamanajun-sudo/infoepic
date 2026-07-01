@@ -5,7 +5,7 @@ pubDate: 2020-11-02
 slug: sm-걸그룹-에스파-aespa-4명-프로필-사진-소개
 draft: false
 category: 엔터
-thumbnail: /images/sm-걸그룹-에스파-aespa-4명-프로필-사진-소개/img.png
+thumbnail: /images/sm-걸그룹-에스파-aespa-4명-프로필-사진-소개/thumb.jpg
 ---
 
 SM에서 레드벨벳 이후 6년 만에 내놓은 4인조 걸그룹 에스파. 2020년 11월 17일 데뷔했다. 한국인 2명과 일본인, 중국인으로 구성되어 있다.

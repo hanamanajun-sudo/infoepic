@@ -5,7 +5,7 @@ description: "윈도우10 앱이고 오늘만이라 많은 분들 못받으시�
 pubDate: 2020-12-27
 slug: "필기앱-펜북penbook-무료-어플-다운로드"
 category: it
-thumbnail: "/images/필기앱-펜북penbook-무료-어플-다운로드/img-1.png"
+thumbnail: "/images/필기앱-펜북penbook-무료-어플-다운로드/thumb.jpg"
 ---
 
 ![필기앱 펜북(penbook) 무료 어플 다운로드 이미지 1](/images/필기앱-펜북penbook-무료-어플-다운로드/img-1.png)

@@ -5,7 +5,7 @@ description: "많은 관심 속에서 프로야구가 드디어 개막"
 pubDate: 2020-05-08
 slug: "KBO-역대-레전드-빠던-모음일본대만미국-비교"
 category: 엔터
-thumbnail: "/images/KBO-역대-레전드-빠던-모음일본대만미국-비교/img.jpg"
+thumbnail: "/images/KBO-역대-레전드-빠던-모음일본대만미국-비교/thumb.jpg"
 ---
 
 많은 관심 속에서 프로야구가 드디어 개막

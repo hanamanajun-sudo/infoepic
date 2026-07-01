@@ -4,7 +4,7 @@ description: "프리미어 사용하다가 유료의 압박으로 무료 편집 
 pubDate: 2020-05-25
 slug: "다빈치-리졸브-단축키핵심만-내가-보려고-만든-거Davinci-마스터-하기"
 category: it
-thumbnail: "/images/다빈치-리졸브-단축키핵심만-내가-보려고-만든-거Davinci-마스터-하기/img-1.png"
+thumbnail: "/images/다빈치-리졸브-단축키핵심만-내가-보려고-만든-거Davinci-마스터-하기/thumb.jpg"
 draft: false
 ---
 

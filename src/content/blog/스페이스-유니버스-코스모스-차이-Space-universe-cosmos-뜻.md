@@ -4,7 +4,7 @@ description: "우주를 표현하는 단어가 여러가지가 있다."
 pubDate: 2022-06-22
 slug: "스페이스-유니버스-코스모스-차이-Space-universe-cosmos-뜻"
 category: 신조어
-thumbnail: "/images/스페이스-유니버스-코스모스-차이-Space-universe-cosmos-뜻/img-1.png"
+thumbnail: "/images/스페이스-유니버스-코스모스-차이-Space-universe-cosmos-뜻/thumb.jpg"
 draft: false
 ---
 

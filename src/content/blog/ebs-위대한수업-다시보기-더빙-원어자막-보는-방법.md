@@ -5,7 +5,7 @@ description: "위대한 수업을 정주행으로 보려고 포스팅으로 정�
 pubDate: 2023-09-29
 slug: "ebs-위대한수업-다시보기-더빙-원어자막-보는-방법"
 category: sns
-thumbnail: "/images/ebs-위대한수업-다시보기-더빙-원어자막-보는-방법/fec189fb-091e-4ad6-9c40-1a376cc8be36.png"
+thumbnail: "/images/ebs-위대한수업-다시보기-더빙-원어자막-보는-방법/thumb.jpg"
 ---
 
 위대한 수업을 정주행으로 보려고 포스팅으로 정리했습니다. 1시즌 2시즌 나왔고 3시즌 방송 시작했어요.

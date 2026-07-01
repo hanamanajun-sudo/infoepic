@@ -4,7 +4,7 @@ description: "샤라웃(shout out)의 사전적 의미부터 힙합·SNS에서 �
 pubDate: 2023-02-01
 slug: "샤라웃shout-out-뜻-3줄-간단-설명"
 category: 신조어
-thumbnail: "/images/샤라웃shout-out-뜻-3줄-간단-설명/img-1.png"
+thumbnail: "/images/샤라웃shout-out-뜻-3줄-간단-설명/thumb.jpg"
 draft: false
 ---
 

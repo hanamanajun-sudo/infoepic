@@ -5,7 +5,7 @@ pubDate: 2020-06-04T00:00:00.000Z
 slug: "그알PD-드루이드-설동물과-친화력-짤-모음"
 draft: false
 category: 엔터
-thumbnail: "/images/그알PD-드루이드-설동물과-친화력-짤-모음/img-1.jpg"
+thumbnail: "/images/그알PD-드루이드-설동물과-친화력-짤-모음/thumb.jpg"
 ---
 
 시작은 주인에게 있었으나

@@ -4,7 +4,7 @@ description: "폰트 다운로드 받으려고 하는데 OTF TTF 두 종류가 �
 pubDate: 2020-10-08T00:00:00.000Z
 slug: "otf-ttf-차이-3줄-요약-설명-어떤-폰트-받아야-해"
 category: 신조어
-thumbnail: "/images/otf-ttf-차이-3줄-요약-설명-어떤-폰트-받아야-해/img-1.png"
+thumbnail: "/images/otf-ttf-차이-3줄-요약-설명-어떤-폰트-받아야-해/thumb.jpg"
 draft: false
 ---
 

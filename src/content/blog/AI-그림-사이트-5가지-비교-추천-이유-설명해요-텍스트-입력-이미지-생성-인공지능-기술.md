@@ -4,7 +4,7 @@ description: "미드저니 3개월 유료 사용, 스테이블 디퓨전 로컬 
 pubDate: 2023-03-15
 slug: "AI-그림-사이트-5가지-비교-추천-이유-설명해요-텍스트-입력-이미지-생성-인공지능-기술"
 category: ai
-thumbnail: "/images/AI-그림-사이트-5가지-비교-추천-이유-설명해요-텍스트-입력-이미지-생성-인공지능-기술/img-1.png"
+thumbnail: "/images/AI-그림-사이트-5가지-비교-추천-이유-설명해요-텍스트-입력-이미지-생성-인공지능-기술/thumb.jpg"
 draft: false
 ---
 
