@@ -31,10 +31,11 @@ interface Props {
   updatedDate?: Date;
   headings?: Heading[];
   category?: string;
+  thumbnail?: string;
   relatedPosts?: RelatedPost[];
 }
 
-const { title, description, slug, pubDate, updatedDate, headings = [], category, relatedPosts = [] } = Astro.props;
+const { title, description, slug, pubDate, updatedDate, headings = [], category, thumbnail, relatedPosts = [] } = Astro.props;
 
 const SITE = 'https://infoepic.com';
 const formattedDate = pubDate
@@ -92,6 +93,17 @@ const jsonLd = {
           )}
         </div>
       </header>
+
+      {thumbnail && (
+        <img
+          src={thumbnail}
+          alt={title}
+          class="post-hero-img"
+          loading="eager"
+          decoding="async"
+          onerror="this.style.display='none'"
+        />
+      )}
 
       <TOC headings={headings} />
 
@@ -153,5 +165,14 @@ const jsonLd = {
 
   .post-updated {
     color: var(--color-primary);
+  }
+
+  .post-hero-img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-8);
   }
 </style>
