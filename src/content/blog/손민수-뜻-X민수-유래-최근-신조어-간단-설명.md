@@ -4,7 +4,7 @@ description: "인터넷 보다가 무슨뜻인지 전혀 감도 안잡히는 단
 pubDate: 2020-09-19
 slug: "손민수-뜻-X민수-유래-최근-신조어-간단-설명"
 category: 신조어
-thumbnail: "/images/손민수-뜻-X민수-유래-최근-신조어-간단-설명/spoon studios (4"
+thumbnail: "/images/손민수-뜻-X민수-유래-최근-신조어-간단-설명/84877ceb-4c75-4de1-8b4d-4a122b2f572c.png"
 draft: false
 ---
 

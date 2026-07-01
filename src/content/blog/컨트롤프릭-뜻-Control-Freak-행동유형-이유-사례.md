@@ -4,7 +4,7 @@ description: "영어로 control freak 사전적 뜻으로는 모든일을 자기
 pubDate: 2022-03-10
 slug: "컨트롤프릭-뜻-Control-Freak-행동유형-이유-사례"
 category: 신조어
-thumbnail: "/images/컨트롤프릭-뜻-Control-Freak-행동유형-이유-사례/제목을 입력해주세요_-001 (2"
+thumbnail: "/images/컨트롤프릭-뜻-Control-Freak-행동유형-이유-사례/제목을-입력해주세요_-001-(2)-(1).png"
 draft: false
 ---
 

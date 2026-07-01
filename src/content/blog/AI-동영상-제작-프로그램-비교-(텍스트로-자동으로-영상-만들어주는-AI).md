@@ -4,7 +4,7 @@ description: "유튜브 동영상을 만드는데 시간도 많이 들어가고 
 pubDate: 2023-03-02T00:00:00.000Z
 slug: AI-동영상-제작-프로그램-4개-비교-텍스트-스크립트-넣으면-영상-자동-생성
 category: ai
-thumbnail: "/images/AI-동영상-제작-프로그램-비교-(텍스트로-자동으로-영상-만들어주는-AI"
+thumbnail: "/images/AI-동영상-제작-프로그램-비교-(텍스트로-자동으로-영상-만들어주는-AI)/edited_이미지-078.png"
 draft: false
 ---
 

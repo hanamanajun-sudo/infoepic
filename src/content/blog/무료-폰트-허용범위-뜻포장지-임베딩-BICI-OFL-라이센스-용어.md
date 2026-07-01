@@ -4,7 +4,7 @@ description: "무료 폰트를 사용할 때 눈누에서 찾아보는데 상업
 pubDate: 2021-12-14
 slug: "무료-폰트-허용범위-뜻포장지-임베딩-BICI-OFL-라이센스-용어"
 category: 신조어
-thumbnail: "/images/무료-폰트-허용범위-뜻포장지-임베딩-BICI-OFL-라이센스-용어/이미ddd지aaa 3 (1"
+thumbnail: "/images/무료-폰트-허용범위-뜻포장지-임베딩-BICI-OFL-라이센스-용어/이미ddd지aaa-3-(1).png"
 draft: false
 ---
 

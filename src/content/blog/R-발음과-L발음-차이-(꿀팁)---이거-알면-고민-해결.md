@@ -4,7 +4,7 @@ description: "영어 발음 중에서도 L 과 R발음 특히 R발음 죽었다 
 pubDate: 2022-01-13T00:00:00.000Z
 slug: R-발음과-L발음-차이-꿀팁-이거-알면-고민-해결
 category: 신조어
-thumbnail: "/images/R-발음과-L발음-차이-(꿀팁"
+thumbnail: "/images/R-발음과-L발음-차이-(꿀팁)---이거-알면-고민-해결/제목을-입력해주세요_-001-(21)-(1).png"
 draft: false
 ---
 

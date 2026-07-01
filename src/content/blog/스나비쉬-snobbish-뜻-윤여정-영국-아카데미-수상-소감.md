@@ -4,7 +4,7 @@ description: "윤여정님이 미나리로 영국 아카데미 시상식에서 �
 pubDate: 2021-04-12
 slug: "스나비쉬-snobbish-뜻-윤여정-영국-아카데미-수상-소감"
 category: 신조어
-thumbnail: "/images/스나비쉬-snobbish-뜻-윤여정-영국-아카데미-수상-소감/제목을 입력해주세요.-001 (1"
+thumbnail: "/images/스나비쉬-snobbish-뜻-윤여정-영국-아카데미-수상-소감/이미지-001-(1).png"
 draft: false
 ---
 
