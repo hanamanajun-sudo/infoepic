@@ -1,7 +1,33 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+
+// 공개 글의 slug -> lastmod(ISO) 매핑. sitemap의 <lastmod> 채우는 데 사용.
+function buildLastmodMap() {
+  const dirPath = fileURLToPath(new URL('./src/content/blog/', import.meta.url));
+  const map = {};
+  for (const file of fs.readdirSync(dirPath)) {
+    if (!file.endsWith('.md')) continue;
+    const text = fs.readFileSync(path.join(dirPath, file), 'utf-8');
+    const draftMatch = text.match(/^draft:\s*(true|false)/m);
+    if (!draftMatch || draftMatch[1] !== 'false') continue;
+    const updatedMatch = text.match(/^updatedDate:\s*(.+)$/m);
+    const pubMatch = text.match(/^pubDate:\s*(.+)$/m);
+    const raw = (updatedMatch?.[1] || pubMatch?.[1] || '').trim().replace(/^["']|["']$/g, '');
+    if (!raw) continue;
+    const date = new Date(raw);
+    if (isNaN(date.getTime())) continue;
+    const slug = file.replace(/\.mdx?$/, '');
+    map[`/entry/${slug}`] = date.toISOString();
+  }
+  return map;
+}
+
+const lastmodMap = buildLastmodMap();
 
 function rehypeLazyImages() {
   function walk(node) {
@@ -91,7 +117,17 @@ function rehypeExternalLinks() {
 
 export default defineConfig({
   site: 'https://infoepic.com',
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      serialize(item) {
+        const pathname = decodeURIComponent(new URL(item.url).pathname);
+        const lastmod = lastmodMap[pathname];
+        if (lastmod) item.lastmod = lastmod;
+        return item;
+      },
+    }),
+  ],
   markdown: {
     rehypePlugins: [rehypeLazyImages, rehypeYouTubeEmbed, rehypeExternalLinks],
   },
