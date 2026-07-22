@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostCard from '../components/PostCard.astro';
+import InFeedAd from '../components/InFeedAd.astro';
 import CategoryNav from '../components/CategoryNav.astro';
 import Pagination from '../components/Pagination.astro';
 import ScrollToTop from '../components/ScrollToTop.astro';
@@ -47,17 +48,20 @@ for (const p of allPosts) {
         <p class="empty-state">아직 게시물이 없습니다.</p>
       ) : (
         <ul class="post-list" role="list">
-          {posts.map(post => {
+          {posts.map((post, i) => {
             const slug = post.id.replace(/\.mdx?$/, '');
             return (
-              <PostCard
-                slug={slug}
-                title={post.data.title}
-                description={post.data.description}
-                pubDate={post.data.pubDate}
-                category={post.data.category}
-                thumbnail={post.data.thumbnail}
-              />
+              <>
+                <PostCard
+                  slug={slug}
+                  title={post.data.title}
+                  description={post.data.description}
+                  pubDate={post.data.pubDate}
+                  category={post.data.category}
+                  thumbnail={post.data.thumbnail}
+                />
+                {i === 4 && <InFeedAd />}
+              </>
             );
           })}
         </ul>
