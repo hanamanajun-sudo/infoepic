@@ -6,3 +6,12 @@ https://www.infoepic.com/* https://infoepic.com/:splat 301!
 
 # sitemap.xml → sitemap-index.xml (Astro 기본 파일명 차이)
 /sitemap.xml /sitemap-index.xml 301
+
+# 티스토리 이관 잔재: 모바일 경로(/m/entry/...) → 데스크톱 경로
+/m/entry/:slug/comments /entry/:slug 301
+/m/entry/:slug /entry/:slug 301
+/m/category/* /category/:splat 301
+/m / 301
+
+# 티스토리 이관 잔재: 댓글 페이지(/comments) → 원 게시글
+/entry/:slug/comments /entry/:slug 301
